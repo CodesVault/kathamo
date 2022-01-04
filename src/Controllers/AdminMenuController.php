@@ -2,6 +2,8 @@
 
 namespace Howdy\Controllers;
 
+use Howdy\Helpers\HowdyHttp;
+
 /**
  * Admin pages Controller
  * Provides functionality for plugin dashboar pages.
