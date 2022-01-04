@@ -16,15 +16,15 @@ use Howdy\Providers\HowdyServiceProvider;
 
 if ( ! defined( 'ABSPATH' ) ) die();
 
-if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
-    require_once __DIR__ . '/vendor/autoload.php';
-}
-require_once __DIR__ . '/bootstrap.php';
-
 define( 'HOWDY', 'howdy' );
 define( 'HOWDY_VERSION', '0.0.1' );
 define( 'HOWDY_FILE', __FILE__ );
 define( 'HOWDY_DIR_PATH', plugin_dir_path( HOWDY_FILE ) );
 define( 'HOWDY_PLUGIN_URL', plugins_url( '/', HOWDY_FILE ) );
+
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
+require_once __DIR__ . '/bootstrap.php';
 
 (new HowdyServiceProvider)->register();
