@@ -27,4 +27,4 @@ if ( file_exists( HOWDY_DIR_PATH . '/vendor/autoload.php' ) ) {
 }
 require_once HOWDY_DIR_PATH . '/bootstrap.php';
 
-(new HowdyServiceProvider)->register();
+(HowdyServiceProvider::getInstance())->register();

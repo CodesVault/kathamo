@@ -2,6 +2,7 @@
 
 namespace Howdy\Providers;
 
+use Howdy\Helpers\SingleTon;
 use Howdy\Providers\Provider;
 
 /**
@@ -13,12 +14,15 @@ use Howdy\Providers\Provider;
  */
 class HowdyServiceProvider implements Provider
 {
+	use SingleTon;
+
     // list of all the service providers
     protected function providers()
     {
         return [
-            AdminServiceProvider::class,
 			EventListenerServiceProvider::class,
+            AdminServiceProvider::class,
+			PublicServiceProvider::class,
         ];
     }
 
