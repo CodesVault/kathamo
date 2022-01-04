@@ -18,6 +18,7 @@ class HowdyServiceProvider implements Provider
     {
         return [
             AdminServiceProvider::class,
+			EventListenerServiceProvider::class,
         ];
     }
 
