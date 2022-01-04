@@ -13,8 +13,19 @@ use Howdy\Providers\Provider;
  */
 class HowdyServiceProvider implements Provider
 {
+    // list of all the service providers
+    protected function providers()
+    {
+        return [
+            AdminServiceProvider::class,
+        ];
+    }
+
+    // register all the services
     public function register()
     {
-        // print_r( "Howdy WP..." );
+        foreach ( $this->providers() as $class ) {
+            (new $class)->register();
+        }
     }
 }

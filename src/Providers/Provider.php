@@ -9,6 +9,7 @@ namespace Howdy\Providers;
  * @author      CodesVault, Keramot UL Islam <sourav926>
  * @since       0.0.1
  */
-interface Provider {
+interface Provider
+{
     public function register();
 }

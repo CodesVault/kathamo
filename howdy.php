@@ -22,9 +22,9 @@ define( 'HOWDY_FILE', __FILE__ );
 define( 'HOWDY_DIR_PATH', plugin_dir_path( HOWDY_FILE ) );
 define( 'HOWDY_PLUGIN_URL', plugins_url( '/', HOWDY_FILE ) );
 
-if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
-    require_once __DIR__ . '/vendor/autoload.php';
+if ( file_exists( HOWDY_DIR_PATH . '/vendor/autoload.php' ) ) {
+    require_once HOWDY_DIR_PATH . '/vendor/autoload.php';
 }
-require_once __DIR__ . '/bootstrap.php';
+require_once HOWDY_DIR_PATH . '/bootstrap.php';
 
 (new HowdyServiceProvider)->register();
