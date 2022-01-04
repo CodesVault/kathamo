@@ -20,19 +20,17 @@ class Response
 
     public function dump($die = false) {
         $data = $this->response;
-        if ( function_exists('dump') ) {
+        if ( function_exists( 'dump' ) ) {
             if (  $die ) {
                 \dd( $data );
             } else {
-                \dump($data);
+                \dump( $data );
             }
         } else {
             echo '<pre>';
             print_r($data);
             echo '</pre>';
         }
-
-        return $this;
     }
 
     public function getBody($decode = true)
