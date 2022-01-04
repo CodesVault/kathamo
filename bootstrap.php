@@ -7,7 +7,7 @@ if ( ! function_exists( 'cf_prefix' ) ) {
      * @param  string $name
      * 
      * @package howdy
-     * @author  Keramot UL Islam <sourav926>
+     * @author  CodesVault, Keramot UL Islam <sourav926>
      * @since   0.0.1
      */
     function howdy_prefix($name)
@@ -25,7 +25,7 @@ if ( ! function_exists( 'howdy_wp_ajax' ) ) {
      * @param bool $public - is this a public ajax action
      * 
      * @package howdy
-     * @author  Keramot UL Islam <sourav926>
+     * @author  CodesVault, Keramot UL Islam <sourav926>
      * @since   0.0.1
      */
     function howdy_wp_ajax($action, $callback, $public = false)
@@ -45,7 +45,7 @@ if ( ! function_exists( 'howdy_loadTemplate' ) ) {
      * @param array $data
      * 
      * @package howdy
-     * @author  Keramot UL Islam <sourav926>
+     * @author  CodesVault, Keramot UL Islam <sourav926>
      * @since   0.0.1
      */
     function howdy_loadTemplate($file_path, $data = [])
@@ -63,6 +63,13 @@ if ( ! function_exists( 'howdy_loadTemplate' ) ) {
     }
 }
 
+/**
+ * Autoloader for classes
+ * 
+ * @package howdy
+ * @author  CodesVault, Keramot UL Islam <sourav926>
+ * @since   0.0.1
+ */
 spl_autoload_register( function ($class) {
     $arr = explode( "\\", $class );
 
