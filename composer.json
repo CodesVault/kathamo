@@ -1,0 +1,18 @@
+{
+    "name": "codesvalut/howdy",
+    "description": "WordPress plugin starter",
+    "type": "project",
+    "authors": [
+        {
+            "name": "CodesVault",
+            "email": "codesvault@gmail.com"
+        },
+        {
+            "name": "AbmSourav",
+            "email": "keramotul.islam@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "symfony/var-dumper": "^6.0"
+    }
+}

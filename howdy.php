@@ -1,0 +1,30 @@
+<?php
+/**
+ * @package howdy
+ * 
+ * Plugin Name: Howdy
+ * Plugin URI: 
+ * Description: A wordpress starter plugin.
+ * Version: 0.0.1
+ * Author: CodesVault
+ * Author URI: https://github.com/CodesVault
+ * License: GPLv2 or later
+ * Text Domain: howdy
+ */
+
+use Howdy\Providers\HowdyServiceProvider;
+
+if ( ! defined( 'ABSPATH' ) ) die();
+
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
+require_once __DIR__ . '/bootstrap.php';
+
+define( 'HOWDY', 'howdy' );
+define( 'HOWDY_VERSION', '0.0.1' );
+define( 'HOWDY_FILE', __FILE__ );
+define( 'HOWDY_DIR_PATH', plugin_dir_path( HOWDY_FILE ) );
+define( 'HOWDY_PLUGIN_URL', plugins_url( '/', HOWDY_FILE ) );
+
+(new HowdyServiceProvider)->register();
