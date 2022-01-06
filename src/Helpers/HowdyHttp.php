@@ -11,9 +11,9 @@ namespace Howdy\Helpers;
  */
 class HowdyHttp
 {
-    private static $base_url = 'https://bdapis.herokuapp.com';
-    private static $namespace = '/api';
-    private static $version = '/v1.1';
+    private static $base_url = 'https://bdapis.herokuapp.com/';
+    private static $namespace = 'api/';
+    private static $version = 'v1.1/';
 
     /**
      * Create API URL with Base URL, Namespace, Version and Route
