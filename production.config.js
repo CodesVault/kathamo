@@ -1,21 +1,8 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const WebpackBuildNotifierPlugin = require("webpack-build-notifier");
 
-const plugins = [
-    new MiniCssExtractPlugin({
-      filename: "../css/main.min.css",
-      chunkFilename: "mian.min.css",
-    }),
-];
-
-module.exports = {
-    entry: `${__dirname}/assets/dev/js/main.js`,
+const config = {
     mode: 'production',
-    output: {
-      path: `${__dirname}/assets/js`,
-      filename: 'bundle.min.js',
-    },
-    plugins,
     module: {
         rules: [
             {
@@ -28,11 +15,37 @@ module.exports = {
                 ],
             },
         ],
-    },
-    optimization: {
-        minimize: true,
-        minimizer: [
-            new CssMinimizerPlugin(),
-        ],
-    },
+    }
 }
+
+const admin = Object.assign( {}, config, {
+    entry: `${__dirname}/assets/dev/admin/js/admin.js`,
+    output: {
+        path: `${__dirname}/assets/admin/js`,
+        filename: 'admin.min.js',
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: `../css/admin.min.css`,
+        }),
+        new WebpackBuildNotifierPlugin({
+            title: "Howdy",
+            suppressSuccess: true,
+        }),
+    ],
+} );
+
+const public = Object.assign( {}, config, {
+    entry: `${__dirname}/assets/dev/public/js/main.js`,
+    output: {
+        path: `${__dirname}/assets/public/js`,
+        filename: 'public.min.js',
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: `../css/public.min.css`,
+        }),
+    ],
+} );
+
+module.exports = [ admin, public ];

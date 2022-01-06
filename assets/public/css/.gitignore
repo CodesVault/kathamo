@@ -1,0 +1,3 @@
+# all files and folders of the parent directory will not be added in git history.
+*
+!.gitignore
