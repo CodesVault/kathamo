@@ -33,12 +33,19 @@ dd($data);  // debug data and die.
 <br>
 <br>
 
+## SingleTon
+A trait for singleton is available. You can use it for creating single class instance.
+For example: check `HowdyServiceProvider` we have used `SingleTon`, then created class instance in `howdy.php > HowdyServiceProvider::getInstance()`.
+
+<br>
+<br>
+
 ## HTTP API
 Set rest api base url, namespace, version in `HowdyHttp` class
 
 <br>
 
-### Request
+### Request Example
 
 ```php
 /**
@@ -48,7 +55,7 @@ Set rest api base url, namespace, version in `HowdyHttp` class
  * @param (array) $arguments
  * @return \Howdy\Helpers\Response
  */
-$response = Request::get( 'post',
+$response = HowdyHttp::get( 'post',
     [
         'timeout' => 25
     ]
@@ -61,7 +68,7 @@ $response = Request::get( 'post',
  * @param (array) $arguments
  * @return \Howdy\Helpers\Response
  */
-$response = Request::post( 'authenticate',
+$response = HowdyHttp::post( 'authenticate',
     [
         'body' => [ 'token' => 'sdlfepoagdhwt3543sfes' ]
     ]
@@ -70,7 +77,7 @@ $response = Request::post( 'authenticate',
 
 <br>
 
-### Response
+### Response API
 HTTP requests return `\Howdy\Helpers\Response` object. This object has apis as below.
 
 ```php
@@ -82,4 +89,20 @@ getMessage()   // response message
 getHeaders()  // get response headers
 
 dump()  // debug response
+```
+
+### Response Example
+
+```php
+$response = HowdyHttp::post( 'authenticate',
+    [
+        'body' => [ 'token' => 'sdlfepoagdhwt3543sfes' ]
+    ]
+);
+
+if ( $response->getStatusCode() === 200 ) {
+    // Do something
+}
+
+$response->dump();  // debug response data
 ```
