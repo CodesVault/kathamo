@@ -30,7 +30,7 @@ class HowdyServiceProvider implements Provider
     public function register()
     {
         foreach ( $this->providers() as $class ) {
-            (new $class)->register();
+            ($class::getInstance())->register();
         }
     }
 }

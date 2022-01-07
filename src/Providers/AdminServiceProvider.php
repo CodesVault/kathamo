@@ -2,6 +2,7 @@
 
 namespace Howdy\Providers;
 
+use Howdy\Helpers\SingleTon;
 use Howdy\Controllers\AdminMenuController;
 
 /**
@@ -14,6 +15,8 @@ use Howdy\Controllers\AdminMenuController;
  */
 class AdminServiceProvider implements Provider
 {
+	use SingleTon;
+	
     public function register()
     {
         (new AdminMenuController)->register();

@@ -2,6 +2,7 @@
 
 namespace Howdy\Providers;
 
+use Howdy\Helpers\SingleTon;
 use Howdy\Controllers\ActivationController;
 use Howdy\Controllers\DeactivationController;
 
@@ -15,6 +16,8 @@ use Howdy\Controllers\DeactivationController;
  */
 class EventListenerServiceProvider implements Provider
 {
+	use SingleTon;
+
     public function register()
     {
         // activation event listener
