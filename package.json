@@ -8,8 +8,8 @@
     "dev": "webpack --config dev.config.js --watch"
   },
   "author": {
-      "name": "CodesVault",
-      "email": "keramotul.islam@gmail.com"
+    "name": "CodesVault",
+    "email": "keramotul.islam@gmail.com"
   },
   "license": "GPL-2.0",
   "devDependencies": {
