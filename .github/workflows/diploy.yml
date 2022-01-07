@@ -14,3 +14,8 @@ jobs:
           node-version: '16'
       - run: npm install
       - run: npm run diploy-build
+      - uses: 10up/action-wordpress-plugin-deploy@stable
+        env:
+          SVN_PASSWORD: ${{ secrets.WP_SVN_PASS }}
+          SVN_USERNAME: ${{ secrets.WP_SVN_USER }}
+          SLUG: howdywp
