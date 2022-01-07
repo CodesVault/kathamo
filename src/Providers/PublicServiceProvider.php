@@ -2,6 +2,8 @@
 
 namespace Howdy\Providers;
 
+use Howdy\Helpers\SingleTon;
+
 /**
  * Public/frontend Service Provider
  * It registers frontend functionalities.
@@ -12,6 +14,8 @@ namespace Howdy\Providers;
  */
 class PublicServiceProvider implements Provider
 {
+	use SingleTon;
+	
     public function register()
     {
        
