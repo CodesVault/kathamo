@@ -4,6 +4,7 @@
   "description": "WordPress plugin starter",
   "main": "index.js",
   "scripts": {
+	"diploy-build": "npm run build && webpack --config dev.config.js",
     "build": "webpack --config production.config.js",
     "dev": "webpack --config dev.config.js --watch"
   },
