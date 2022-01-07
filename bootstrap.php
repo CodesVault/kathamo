@@ -1,6 +1,6 @@
 <?php
 
-if ( ! function_exists( 'cf_prefix' ) ) {
+if ( ! function_exists( 'howdy_prefix' ) ) {
     /**
      * Add prefix for the given string.
      * 
@@ -12,7 +12,39 @@ if ( ! function_exists( 'cf_prefix' ) ) {
      */
     function howdy_prefix($name)
     {
-        return HOWDY . $name;
+        return HOWDY . "-" . $name;
+    }
+}
+
+if ( ! function_exists( 'howdy_url' ) ) {
+    /**
+     * Add prefix for the given string.
+     * 
+     * @param  string $name
+     * 
+     * @package howdy
+     * @author  CodesVault, Keramot UL Islam <sourav926>
+     * @since   0.0.1
+     */
+    function howdy_url($path)
+    {
+        return HOWDY_PLUGIN_URL . $path;
+    }
+}
+
+if ( ! function_exists( 'howdy_asset_url' ) ) {
+    /**
+     * Add prefix for the given string.
+     * 
+     * @param  string $name
+     * 
+     * @package howdy
+     * @author  CodesVault, Keramot UL Islam <sourav926>
+     * @since   0.0.1
+     */
+    function howdy_asset_url($path)
+    {
+        return howdy_url( "assets/" . $path );
     }
 }
 
