@@ -106,3 +106,15 @@ if ( $response->getStatusCode() === 200 ) {
 
 $response->dump();  // debug response data
 ```
+
+<br>
+<br>
+
+## Deploy Automation
+
+Deploy to WordPress org plugin repo by creating a tag and push it on Github.
+For doing so, just go to your plugin Github repo `Settings > Secrets` and create tow variables as below.
+```
+WP_SVN_USER <your svn user>
+WP_SVN_PASS <your svn password>
+```
