@@ -7,6 +7,7 @@ WordPress plugin starter. Based on "Service Provider" design pattern.
 ## Environment setup
 1. `composer install`
 2. `npm install`
+3. `npm run dev`
 
 <br>
 
