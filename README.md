@@ -115,7 +115,8 @@ $response->dump();  // debug response data
 ## Deploy Automation
 
 Deploy to WordPress org plugin repo by creating a tag and push it on Github.
-For doing so, just go to your plugin Github repo `Settings > Secrets` and create tow variables as below.
+For doing so, just go to your plugin Github repo `Settings > Secrets` and create tow variables as below. 
+That's it, now whenever you push a tag on Github the plugin will be automatically deployed to WP ORG plugin repo. It remove all development files that are not required in production. If you want to change which development files to remove than just modife `.distignore`.
 ```
 WP_SVN_USER <your svn user>
 WP_SVN_PASS <your svn password>
