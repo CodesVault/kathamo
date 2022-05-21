@@ -127,5 +127,7 @@ spl_autoload_register( function ($class) {
     array_shift( $arr );
 
     $file = __DIR__ . '/src/' . implode( '/', $arr ) . '.php';
+    if ( ! file_exists( $file ) ) return;
+
     require_once $file;
 } );
