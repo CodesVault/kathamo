@@ -1,7 +1,7 @@
 <?php
 /**
  * @package howdy
- * 
+ *
  * Plugin Name: Howdy
  * Plugin URI: 
  * Description: A wordpress starter plugin.
@@ -12,7 +12,7 @@
  * Text Domain: howdy
  */
 
-use Howdy\Providers\HowdyServiceProvider;
+use Howdy\Core\HowdyCore;
 
 if ( ! defined( 'ABSPATH' ) ) die();
 
@@ -21,10 +21,11 @@ define( 'HOWDY_VERSION', '0.0.2' );
 define( 'HOWDY_FILE', __FILE__ );
 define( 'HOWDY_DIR_PATH', plugin_dir_path( HOWDY_FILE ) );
 define( 'HOWDY_PLUGIN_URL', plugins_url( '/', HOWDY_FILE ) );
+define( 'HOWDY_DEV_MODE', false );
 
 if ( file_exists( HOWDY_DIR_PATH . '/vendor/autoload.php' ) ) {
     require_once HOWDY_DIR_PATH . '/vendor/autoload.php';
 }
 require_once HOWDY_DIR_PATH . '/bootstrap.php';
 
-(HowdyServiceProvider::getInstance())->register();
+HowdyCore::getInstance();

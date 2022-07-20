@@ -1,15 +1,15 @@
 <?php
 
-namespace Howdy\Helpers;
+namespace Howdy\Services;
 
 /**
- * Helper class for HTTP requests
- * 
+ * Services class for HTTP requests
+ *
  * @package     howdy
  * @author      CodesVault, Keramot UL Islam <sourav926>
  * @since       0.0.1
  */
-class HowdyHttp
+class HttpKernel
 {
     private static $base_url = 'https://bdapis.herokuapp.com/';
     private static $namespace = 'api/';
@@ -28,7 +28,7 @@ class HowdyHttp
 
     /**
      * POST request
-     * 
+     *
      * @param (string) $route
      * @param (array) $args
      * @return \Howdy\Helpers\Response
@@ -45,7 +45,7 @@ class HowdyHttp
 
     /**
      * GET request
-     * 
+     *
      * @param (string) $route
      * @param (array) $args
      * @return \Howdy\Helpers\Response

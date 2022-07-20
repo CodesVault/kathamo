@@ -1,10 +1,10 @@
 <?php
 
-namespace Howdy\Helpers;
+namespace Howdy\Services;
 
 /**
- * Helper class for HTTP response
- * 
+ * Services class for HTTP response
+ *
  * @package     howdy
  * @author      CodesVault, Keramot UL Islam <sourav926>
  * @since       0.0.1

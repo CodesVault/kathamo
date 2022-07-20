@@ -1,19 +1,16 @@
 <?php
 
-namespace Howdy\Providers;
-
-use Howdy\Providers\Provider;
-use Howdy\Helpers\SingleTon;
+namespace Howdy\Core;
 
 /**
  * Assets Service Provider.
  * it registers all assets of the plugin.
- * 
+ *
  * @package     howdy
  * @author      CodesVault, Keramot UL Islam <sourav926>
  * @since       0.0.1
  */
-class AssetsServiceProvider implements Provider
+class AssetsManager
 {
 	use SingleTon;
 
@@ -28,8 +25,7 @@ class AssetsServiceProvider implements Provider
 
 	private function before_register_assets()
 	{
-		// HOWDY_DEV_MODE constant is defined in wp-config.php
-		if ( defined( "HOWDY_DEV_MODE" ) && \HOWDY_DEV_MODE ) {
+		if ( \HOWDY_DEV_MODE ) {
 			$this->extension_prefix = '';
 		}
 	}
