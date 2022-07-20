@@ -43,7 +43,7 @@ For example: check `HowdyServiceProvider` we have used `SingleTon`, then created
 <br>
 
 ## HTTP API
-Set rest api base url, namespace, version in `HowdyHttp` class
+Set rest api base url, namespace, version in `HttpKernel` class
 
 <br>
 
@@ -55,9 +55,9 @@ Set rest api base url, namespace, version in `HowdyHttp` class
  * 
  * @param (string) $route
  * @param (array) $arguments
- * @return \Howdy\Helpers\Response
+ * @return \Howdy\Services\Response
  */
-$response = HowdyHttp::get( 'post',
+$response = HttpKernel::get( 'post',
     [
         'timeout' => 25
     ]
@@ -68,9 +68,9 @@ $response = HowdyHttp::get( 'post',
  * 
  * @param (string) $route
  * @param (array) $arguments
- * @return \Howdy\Helpers\Response
+ * @return \Howdy\Services\Response
  */
-$response = HowdyHttp::post( 'authenticate',
+$response = HttpKernel::post( 'authenticate',
     [
         'body' => [ 'token' => 'sdlfepoagdhwt3543sfes' ]
     ]
@@ -96,7 +96,7 @@ dump()  // debug response
 ### Response Example
 
 ```php
-$response = HowdyHttp::post( 'authenticate',
+$response = HttpKernel::post( 'authenticate',
     [
         'body' => [ 'token' => 'sdlfepoagdhwt3543sfes' ]
     ]

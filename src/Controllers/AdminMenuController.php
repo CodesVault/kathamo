@@ -2,6 +2,8 @@
 
 namespace Howdy\Controllers;
 
+use Howdy\Core\SingleTon;
+
 /**
  * Admin pages Controller
  * Provides functionality for plugin dashboar pages.
@@ -12,10 +14,12 @@ namespace Howdy\Controllers;
  */
 class AdminMenuController extends BaseController
 {
-	public function register()
-	{
-		add_action( 'admin_menu', [ $this, 'addAdminMenu' ] );
-	}
+	use SingleTon;
+
+	// public function register()
+	// {
+	// 	add_action( 'admin_menu', [ $this, 'addAdminMenu' ] );
+	// }
 
 	public function addAdminMenu()
 	{

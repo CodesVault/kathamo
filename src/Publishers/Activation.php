@@ -1,16 +1,16 @@
 <?php
 
-namespace Howdy\Controllers;
+namespace Howdy\Publishers;
 
 /**
- * Plugin Activation Controller
+ * Plugin Activation Event Handler.
  * Provides functionality for plugin activation event.
  *
  * @package     howdy
  * @author      CodesVault, Keramot UL Islam <sourav926>
  * @since       0.0.1
  */
-class ActivationController extends BaseController
+class Activation
 {
 	public static function activate()
 	{
