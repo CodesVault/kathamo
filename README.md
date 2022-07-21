@@ -8,7 +8,7 @@ WordPress plugin starter. Based on "Service Provider" design pattern.
 1. `composer install`
 2. `npm install`
 3. `npm run dev`
-4. `wp-config.php > define( HOWDY_DEV_MODE, true )` for loading unminified assets.
+4. Change `HOWDY_DEV_MODE` to `true` for loading unminified assets.
 
 <br>
 

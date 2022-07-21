@@ -114,7 +114,7 @@ if ( ! function_exists( 'howdy_loadViewTemplate' ) ) {
 
 /**
  * Autoloader for classes
- * 
+ *
  * @package howdy
  * @author  CodesVault, Keramot UL Islam <sourav926>
  * @since   0.0.1
