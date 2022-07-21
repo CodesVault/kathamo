@@ -37,7 +37,7 @@ dd($data);  // debug data and die.
 
 ## SingleTon
 A trait for singleton is available. You can use it for creating single class instance.
-For example: check `HowdyServiceProvider` we have used `SingleTon`, then created class instance in `howdy.php > HowdyServiceProvider::getInstance()`.
+For example: check `HowdyCore` we have used `SingleTon`, then created class instance in `howdy.php > HowdyCore::getInstance()`.
 
 <br>
 <br>
@@ -80,7 +80,7 @@ $response = HttpKernel::post( 'authenticate',
 <br>
 
 ### Response API
-HTTP requests return `\Howdy\Helpers\Response` object. This object has apis as below.
+HTTP requests return `\Howdy\Services\Response` object. This object has apis as below.
 
 ```php
 getBody()  // json decoded body of the response
