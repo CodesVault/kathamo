@@ -14,7 +14,7 @@ WordPress plugin starter. Based on "Service Provider" design pattern.
 
 ## Plugin Backend Architecture
 
-![Architecture](https://abmsourav.com/welcome/wp-content/uploads/2022/07/howdy-architecture.png)
+![Architecture](https://abmsourav.com/welcome/wp-content/uploads/2022/07/howdy-plugin-architecture.png)
 
 ## Debugging Tool/API
 On development environment, two apis are available for better debugging experience.
