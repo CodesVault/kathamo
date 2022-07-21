@@ -114,7 +114,7 @@ if ( ! function_exists( 'howdy_loadViewTemplate' ) ) {
 
 /**
  * Autoloader for classes
- * 
+ *
  * @package howdy
  * @author  CodesVault, Keramot UL Islam <sourav926>
  * @since   0.0.1
@@ -126,7 +126,7 @@ spl_autoload_register( function ($class) {
     if ( $arr[0] != $namespace_root ) return;
     array_shift( $arr );
 
-    $file = __DIR__ . '/src/' . implode( '/', $arr ) . '.php';
+    $file = HOWDY_DIR_PATH . '/src/' . implode( '/', $arr ) . '.php';
     if ( ! file_exists( $file ) ) return;
 
     require_once $file;

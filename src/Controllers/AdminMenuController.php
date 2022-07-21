@@ -36,7 +36,12 @@ class AdminMenuController extends BaseController
 
 	public function renderAdminMenu()
 	{
-		$data = [ 'plugin_name' => 'Howdy', 'author' => 'Developed by "CodesVault"' ];
+		$data = [
+			'plugin_name'	=> 'Howdy',
+			'developed'		=> 'Developed by',
+			'author_name'	=> 'CodesVault',
+			'author_link'	=> 'https://github.com/CodesVault',
+		];
 		$this->render( 'admin/admin-menu.php', $data );
 	}
 }
