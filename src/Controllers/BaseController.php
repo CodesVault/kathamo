@@ -4,7 +4,7 @@ namespace Howdy\Controllers;
 
 /**
  * Base Controller.
- * 
+ *
  * @package     howdy
  * @author      CodesVault, Keramot UL Islam <sourav926>
  * @since       0.0.1

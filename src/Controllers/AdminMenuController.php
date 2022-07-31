@@ -16,11 +16,6 @@ class AdminMenuController extends BaseController
 {
 	use SingleTon;
 
-	// public function register()
-	// {
-	// 	add_action( 'admin_menu', [ $this, 'addAdminMenu' ] );
-	// }
-
 	public function addAdminMenu()
 	{
 		add_menu_page(

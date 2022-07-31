@@ -13,7 +13,7 @@ use Howdy\Core\SingleTon;
  *
  * @package     howdy
  * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.1
+ * @since       0.0.3
  */
 class EventPublisher
 {

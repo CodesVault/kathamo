@@ -5,13 +5,14 @@ namespace Howdy\Database\Migrations;
 use Howdy\Core\SingleTon;
 
 /**
- * Main Class for plugin
+ * Main Class for DB migrations
+ * Extend this class to create your own migrations.
  *
  * @package     howdy
  * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.1
+ * @since       0.0.3
  */
-class CreateTable
+class MigrateCore
 {
     use SingleTon;
 
@@ -23,15 +24,17 @@ class CreateTable
     protected function create($table_name, $sql)
     {
         global $wpdb;
+        if ( ! $wpdb ) return;
 
         $charsetCollate = $wpdb->get_charset_collate();
         $sql_query = $sql . ' ' . $charsetCollate;
         $table_name = $wpdb->prefix . $table_name;
 
-        if ( $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) == $table_name ) {
+        $old_table_name = $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" );
+        if ( $old_table_name == $table_name ) {
             return;
         }
         require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-        dbDelta( $sql_query );
+        \dbDelta( $sql_query );
     }
 }
