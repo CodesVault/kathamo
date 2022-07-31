@@ -131,3 +131,23 @@ spl_autoload_register( function ($class) {
 
     require_once $file;
 } );
+
+/**
+ * Auto load migration files and run migrations.
+ *
+ * @package howdy
+ * @author  CodesVault, Keramot UL Islam <sourav926>
+ * @since   0.0.3
+ */
+$file_path = HOWDY_DIR_PATH . '/src/Database/Migrations/';
+foreach ( new \DirectoryIterator( $file_path ) as $fileInfo ) {
+    if ( $fileInfo->isDot() || $fileInfo->getExtension() !== 'php' ) continue;
+
+    require_once $fileInfo->getPathname();
+    $class_name = explode( '.', $fileInfo->getFilename() )[0];
+    if ( $class_name === 'MigrateCore' ) continue;
+    
+    $class_name = '\Howdy\Database\Migrations\\' . $class_name;
+    $class_name::getInstance();
+    sleep(1);
+}
