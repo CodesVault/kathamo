@@ -1,9 +1,9 @@
 <?php
 
-namespace Howdy\Services;
+namespace Howdy\Core\Lib;
 
 /**
- * Services class for HTTP response
+ * Handle HTTP response attributes.
  *
  * @package     howdy
  * @author      CodesVault, Keramot UL Islam <sourav926>

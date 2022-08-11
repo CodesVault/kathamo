@@ -3,9 +3,9 @@
 namespace Howdy\Publishers;
 
 use Howdy\Controllers\AdminMenuController;
+use Howdy\Core\Lib\SingleTon;
 use Howdy\Publishers\Activation;
 use Howdy\Publishers\Deactivation;
-use Howdy\Core\SingleTon;
 
 /**
  * Event Listener.

@@ -2,7 +2,7 @@
 
 namespace Howdy\Controllers;
 
-use Howdy\Core\SingleTon;
+use Howdy\Core\Lib\SingleTon;
 
 /**
  * Admin pages Controller

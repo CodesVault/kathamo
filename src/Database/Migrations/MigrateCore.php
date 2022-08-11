@@ -2,7 +2,7 @@
 
 namespace Howdy\Database\Migrations;
 
-use Howdy\Core\SingleTon;
+use Howdy\Core\Lib\SingleTon;
 
 /**
  * Main Class for DB migrations

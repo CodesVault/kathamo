@@ -2,6 +2,8 @@
 
 namespace Howdy\Core;
 
+use Howdy\Core\Lib\SingleTon;
+
 /**
  * Assets Service Provider.
  * it registers all assets of the plugin.
