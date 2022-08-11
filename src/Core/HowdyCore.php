@@ -2,6 +2,7 @@
 
 namespace Howdy\Core;
 
+use Howdy\Core\Lib\SingleTon;
 use Howdy\Publishers\EventPublisher;
 
 /**

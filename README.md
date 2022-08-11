@@ -44,10 +44,10 @@ Set rest api base url, namespace, version in `HttpKernel` class
 ```php
 /**
  * GET request
- * 
+ *
  * @param (string) $route
  * @param (array) $arguments
- * @return \Howdy\Services\Response
+ * @return \Howdy\Core\Lib\Response
  */
 $response = HttpKernel::get( 'post',
     [
@@ -60,7 +60,7 @@ $response = HttpKernel::get( 'post',
  * 
  * @param (string) $route
  * @param (array) $arguments
- * @return \Howdy\Services\Response
+ * @return \Howdy\Core\Lib\Response
  */
 $response = HttpKernel::post( 'authenticate',
     [
@@ -72,7 +72,7 @@ $response = HttpKernel::post( 'authenticate',
 <br>
 
 ### Response API
-HTTP requests return `\Howdy\Services\Response` object. This object has apis as below.
+HTTP requests return `\Howdy\Core\Lib\Response` object. This object has apis as below.
 
 ```php
 getBody()  // json decoded body of the response

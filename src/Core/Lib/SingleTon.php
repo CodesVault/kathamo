@@ -1,6 +1,6 @@
 <?php
 
-namespace Howdy\Core;
+namespace Howdy\Core\Lib;
 
 /**
  * Singletone trait.
