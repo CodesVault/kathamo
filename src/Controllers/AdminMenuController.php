@@ -3,6 +3,7 @@
 namespace Howdy\Controllers;
 
 use Howdy\Core\Lib\SingleTon;
+use Howdy\Services\AdminMenuService;
 
 /**
  * Admin pages Controller
@@ -31,12 +32,8 @@ class AdminMenuController extends BaseController
 
 	public function renderAdminMenu()
 	{
-		$data = [
-			'plugin_name'	=> 'Howdy',
-			'developed'		=> 'Developed by',
-			'author_name'	=> 'CodesVault',
-			'author_link'	=> 'https://github.com/CodesVault',
-		];
+		$menu_data = AdminMenuService::getInstance();
+		$data = $menu_data->getData();
 		$this->render( 'admin/admin-menu.php', $data );
 	}
 }
