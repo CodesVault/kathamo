@@ -24,7 +24,7 @@ define( 'HOWDY_PLUGIN_URL', plugins_url( '/', HOWDY_FILE ) );
 define( 'HOWDY_DEV_MODE', false );
 
 if ( file_exists( HOWDY_DIR_PATH . '/vendor/autoload.php' ) ) {
-    require_once HOWDY_DIR_PATH . '/vendor/autoload.php';
+	require_once HOWDY_DIR_PATH . '/vendor/autoload.php';
 }
 require_once HOWDY_DIR_PATH . '/src/Core/bootstrap.php';
 

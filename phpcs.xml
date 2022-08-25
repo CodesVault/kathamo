@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<ruleset name="HowdyWP">
+
+    <arg name="extensions" value="php"/>
+    <arg name="parallel" value="40" />
+    <arg value="ps" /><!-- ps argument shows rule name on terminal -->
+	<arg name="colors" />
+
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>assets/*</exclude-pattern>
+    <exclude-pattern>.github/*</exclude-pattern>
+    <exclude-pattern>node_modues/*</exclude-pattern>
+
+    <rule ref="WordPress">
+        <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
+        <exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterOpen"/>
+        <exclude name="Squiz.Commenting.FileComment.Missing"/>
+        <exclude name="Squiz.Strings.DoubleQuoteUsage.NotRequired" />
+        <exclude name="Generic.Classes.OpeningBraceSameLine.BraceOnNewLine" />
+        <exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine" />
+        <exclude name="Squiz.Commenting.FunctionComment.Missing" />
+        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.ExtraSpaceAfterCloseParenthesis" />
+        <exclude name="Generic.ControlStructures.InlineControlStructure.NotAllowed" />
+        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOpenParenthesis" />
+        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeCloseParenthesis" />
+    </rule>
+    <rule ref="WordPress-Docs" />
+    <rule ref="Squiz.Commenting.DocCommentAlignment" />
+    <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine" />
+    <rule ref="Squiz.Classes.ClassDeclaration.OpenBraceNewLine" />
+</ruleset>
