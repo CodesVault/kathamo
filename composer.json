@@ -13,9 +13,9 @@
         }
     ],
     "scripts": {
-        "phpc": "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
         "phpcs": "phpcs ",
-        "phpcbf": "phpcbf "
+        "phpcbf": "phpcbf ",
+		"post-package-install": "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs"
     },
     "require-dev": {
         "symfony/var-dumper": "^5.4",

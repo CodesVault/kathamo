@@ -11,6 +11,23 @@ namespace Howdy\Controllers;
  */
 class BaseController
 {
+	/**
+	 * Register hooks callback
+	 *
+	 * @return void
+	 */
+	public function register()
+	{}
+    
+    /**
+     * Render view file and pass data to the file.
+     *
+     * @param  string $file_path
+     * @param  array $data
+     * @param  bool $buffer
+	 *
+     * @return mixed
+     */
     public function render( $file_path, $data = [], $buffer = false )
     {
         if ( ! $buffer ) {

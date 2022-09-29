@@ -125,6 +125,9 @@ spl_autoload_register(
 
 		$namespace_root = ucfirst( HOWDY );
 		if ( $arr[0] != $namespace_root ) return;
+		// echo "<pre>";
+		// print_r($arr);
+		// echo "</pre>";
 		array_shift( $arr );
 
 		$file = HOWDY_DIR_PATH . '/src/' . implode( '/', $arr ) . '.php';
