@@ -5,11 +5,21 @@ WordPress plugin starter. Based on "Service Provider" design pattern.
 <br>
 
 ## Environment setup
+If make commands work in your OS then just need to run `make setup`.
+
+<br>
+Otherwise follow this process:
+<br>
+
 1. `composer install`
 2. `npm install`
 3. `npm run dev`
-4. Change `HOWDY_DEV_MODE` to `true` for loading unminified assets.
 
+<br>
+
+If you want to enqueue unminified assets then change `HOWDY_DEV_MODE` to `true` for loading unminified assets.
+
+<br>
 <br>
 
 ## Plugin Backend Architecture
