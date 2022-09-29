@@ -24,7 +24,7 @@ If you want to enqueue unminified assets then change `HOWDY_DEV_MODE` to `true` 
 
 ## Plugin Backend Architecture
 
-![Architecture](https://abmsourav.com/welcome/wp-content/uploads/2022/07/howdy-plugin-architecture.png)
+![Architecture](https://abmsourav.com/welcome/wp-content/uploads/2022/09/howdyWP-plugin-architecture.png)
 
 ## Debugging Tool/API
 On development environment, two apis are available for better debugging experience.
