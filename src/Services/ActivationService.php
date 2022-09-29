@@ -1,16 +1,16 @@
 <?php
 
-namespace Howdy\Publishers;
+namespace Howdy\Services;
 
 /**
- * Plugin Activation Event Handler.
+ * Plugin Activation Service.
  * Provides functionality for plugin activation event.
  *
  * @package     howdy
  * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.1
+ * @since       0.0.4
  */
-class Activation
+class ActivationService
 {
 	public static function activate()
 	{

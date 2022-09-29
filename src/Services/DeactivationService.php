@@ -1,16 +1,16 @@
 <?php
 
-namespace Howdy\Publishers;
+namespace Howdy\Services;
 
 /**
- * Plugin Deactivation Event Handler.
+ * Plugin Deactivation Service.
  * Provides functionality for plugin deactivation event.
  *
  * @package     howdy
  * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.1
+ * @since       0.0.4
  */
-class Deactivation
+class DeactivationService
 {
 	public static function deactivate()
 	{

@@ -3,7 +3,6 @@
 namespace Howdy\Core;
 
 use Howdy\Core\Lib\SingleTon;
-use Howdy\Publishers\EventPublisher;
 
 /**
  * Main Class for plugin
@@ -18,7 +17,6 @@ final class HowdyCore
 
     public function __construct()
     {
-        EventPublisher::getInstance()->register();
-        AssetsManager::getInstance()->register();
+        HooksPublisher::getInstance()->publish();
     }
 }
