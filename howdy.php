@@ -3,7 +3,7 @@
  * @package howdy
  *
  * Plugin Name: Howdy
- * Plugin URI: 
+ * Plugin URI:
  * Description: A wordpress starter plugin.
  * Version: 0.0.3
  * Author: CodesVault
