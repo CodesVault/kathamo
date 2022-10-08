@@ -19,10 +19,10 @@ class ActivationService
 	public function register()
 	{
 		// activation event handler
-        \register_activation_hook(
-            HOWDY_FILE,
-            [ __CLASS__, 'activate' ]
-        );
+		\register_activation_hook(
+			HOWDY_FILE,
+			[ __CLASS__, 'activate' ]
+		);
 	}
 
 	public static function activate()

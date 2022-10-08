@@ -13,10 +13,10 @@ use Howdy\Core\Lib\SingleTon;
  */
 final class HowdyCore
 {
-    use SingleTon;
+	use SingleTon;
 
-    public function __construct()
-    {
-        HooksPublisher::getInstance()->publish();
-    }
+	public function __construct()
+	{
+		HooksPublisher::getInstance()->publish();
+	}
 }
