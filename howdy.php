@@ -4,7 +4,7 @@
  *
  * Plugin Name: Howdy
  * Plugin URI:
- * Description: A wordpress starter plugin.
+ * Description: A WordPress starter plugin.
  * Version: 0.0.3
  * Author: CodesVault
  * Author URI: https://github.com/CodesVault

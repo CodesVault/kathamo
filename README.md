@@ -22,16 +22,16 @@ If you want to enqueue unminified assets then change `HOWDY_DEV_MODE` to `true` 
 <br>
 <br>
 
-## Plugin Backend Architecture
+## Plugin Architecture
 
-![Architecture](https://abmsourav.com/welcome/wp-content/uploads/2022/09/howdyWP-plugin-architecture.png)
+![Architecture](https://abmsourav.com/welcome/wp-content/uploads/2022/10/howdy-WP-plugin-architecture.png)
 
 ## Debugging Tool/API
 On development environment, two apis are available for better debugging experience.
 
 ```php
 dump($data);  // debug data
-dd($data);  // debug data and die. 
+dd($data);  // debug data and die.
 ```
 
 <br>
@@ -67,7 +67,7 @@ $response = HttpKernel::get( 'post',
 
 /**
  * POST request
- * 
+ *
  * @param (string) $route
  * @param (array) $arguments
  * @return \Howdy\Core\Lib\Response
