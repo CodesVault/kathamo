@@ -25,6 +25,9 @@
         <exclude name="Generic.ControlStructures.InlineControlStructure.NotAllowed" />
         <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOpenParenthesis" />
         <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeCloseParenthesis" />
+		<exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found" />
+		<exclude name="Generic.Commenting.DocComment.MissingShort" />
     </rule>
     <rule ref="WordPress-Docs" />
     <rule ref="Squiz.Commenting.DocCommentAlignment" />
