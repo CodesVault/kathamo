@@ -18,10 +18,10 @@ class HooksPublisher
 {
 	use SingleTon;
 
-    public function publish()
-    {
+	public function publish()
+	{
 		// list of all those classes which need to register hooks.
-        $class_list = [
+		$class_list = [
 			ActivationService::class,
 			DeactivationService::class,
 			AssetsManager::class,
@@ -32,5 +32,5 @@ class HooksPublisher
 		foreach ( $class_list as $class ) {
 			$class::getInstance()->register();
 		}
-    }
+	}
 }

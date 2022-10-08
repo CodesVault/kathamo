@@ -14,27 +14,27 @@ use Howdy\Core\Lib\SingleTon;
  */
 class MigrateCore
 {
-    use SingleTon;
+	use SingleTon;
 
-    public function migrate($table_name, $sql)
-    {
-        $this->create($table_name, $sql);
-    }
+	public function migrate($table_name, $sql)
+	{
+		$this->create( $table_name, $sql );
+	}
 
-    protected function create($table_name, $sql)
-    {
-        global $wpdb;
-        if ( ! $wpdb ) return;
+	protected function create($table_name, $sql)
+	{
+		global $wpdb;
+		if ( ! $wpdb ) return;
 
-        $charsetCollate = $wpdb->get_charset_collate();
-        $sql_query = $sql . ' ' . $charsetCollate;
-        $table_name = $wpdb->prefix . $table_name;
+		$charset_collate = $wpdb->get_charset_collate();
+		$sql_query       = $sql . ' ' . $charset_collate;
+		$table_name      = $wpdb->prefix . $table_name;
 
-        $old_table_name = $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" );
-        if ( $old_table_name == $table_name ) {
-            return;
-        }
-        require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-        \dbDelta( $sql_query );
-    }
+		$old_table_name = $wpdb->get_var( $wpdb->prepare( "SHOW TABLES LIKE %s", $table_name ) );	// @phpcs:ignore
+		if ( $old_table_name === $table_name ) {
+			return;
+		}
+		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+		\dbDelta( $sql_query );
+	}
 }

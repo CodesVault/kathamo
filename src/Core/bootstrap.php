@@ -20,7 +20,7 @@ if ( ! function_exists( 'howdy_url' ) ) {
 	/**
 	 * Add prefix for the given string.
 	 *
-	 * @param  string $name
+	 * @param  string $path
 	 *
 	 * @package howdy
 	 * @author  CodesVault, Keramot UL Islam <sourav926>
@@ -36,7 +36,7 @@ if ( ! function_exists( 'howdy_asset_url' ) ) {
 	/**
 	 * Add prefix for the given string.
 	 *
-	 * @param  string $name
+	 * @param  string $path
 	 *
 	 * @package howdy
 	 * @author  CodesVault, Keramot UL Islam <sourav926>
@@ -53,7 +53,7 @@ if ( ! function_exists( 'howdy_wp_ajax' ) ) {
 	 * Wrapper function for wp_ajax_* and wp_ajax_nopriv_*
 	 *
 	 * @param  string $action - action name
-	 * @param string $method - callback method name
+	 * @param string $callback - callback method name
 	 * @param bool   $public - is this a public ajax action
 	 *
 	 * @package howdy
@@ -69,7 +69,7 @@ if ( ! function_exists( 'howdy_wp_ajax' ) ) {
 	}
 }
 
-if ( ! function_exists( 'howdy_loadTemplate' ) ) {
+if ( ! function_exists( 'howdy_render_template' ) ) {
 	/**
 	 * Require a Template file.
 	 *
@@ -79,8 +79,11 @@ if ( ! function_exists( 'howdy_loadTemplate' ) ) {
 	 * @package howdy
 	 * @author  CodesVault, Keramot UL Islam <sourav926>
 	 * @since   0.0.1
+	 *
+	 * @throws \Exception - if file not found throw exception
+	 * @throws \Exception - if data is not array throw exception
 	 */
-	function howdy_loadTemplate($file_path, $data = array())
+	function howdy_render_template($file_path, $data = array())
 	{
 		$file = HOWDY_DIR_PATH . "src/" . $file_path;
 		if ( ! file_exists( $file ) ) {
@@ -89,13 +92,13 @@ if ( ! function_exists( 'howdy_loadTemplate' ) ) {
 		if ( ! is_array( $data ) ) {
 			throw new \Exception( "Expected array as data" );
 		}
-		extract( $data, EXTR_PREFIX_SAME, 'howdy' );
+		extract( $data, EXTR_PREFIX_SAME, 'howdy' );	// @phpcs:ignore
 
 		return require_once $file;
 	}
 }
 
-if ( ! function_exists( 'howdy_loadViewTemplate' ) ) {
+if ( ! function_exists( 'howdy_render_view_template' ) ) {
 	/**
 	 * Require a View template file.
 	 *
@@ -106,9 +109,9 @@ if ( ! function_exists( 'howdy_loadViewTemplate' ) ) {
 	 * @author  CodesVault, Keramot UL Islam <sourav926>
 	 * @since   0.0.1
 	 */
-	function howdy_loadViewTemplate($file_path, $data = array())
+	function howdy_render_view_template($file_path, $data = array())
 	{
-		return howdy_loadTemplate( "Views/" . $file_path, $data );
+		return howdy_render_template( "Views/" . $file_path, $data );
 	}
 }
 
@@ -124,7 +127,7 @@ spl_autoload_register(
 		$arr = explode( "\\", $class );
 
 		$namespace_root = ucfirst( HOWDY );
-		if ( $arr[0] != $namespace_root ) return;
+		if ( $arr[0] !== $namespace_root ) return;
 		array_shift( $arr );
 
 		$file = HOWDY_DIR_PATH . '/src/' . implode( '/', $arr ) . '.php';
@@ -147,7 +150,7 @@ foreach ( new \DirectoryIterator( $file_path ) as $file_info ) {
 
 	require_once $file_info->getPathname();
 	$class_name = explode( '.', $file_info->getFilename() )[0];
-	if ( $class_name === 'MigrateCore' ) continue;
+	if ( $class_name === 'MigrateCore' ) continue;	// @phpcs:ignore
 
 	$class_name = '\Howdy\Database\Migrations\\' . $class_name;
 	$class_name::getInstance();

@@ -14,21 +14,22 @@ use Howdy\Core\Lib\SingleTon;
  */
 class TestWP extends MigrateCore
 {
-    use SingleTon;
+	use SingleTon;
 
-    public function __construct()
-    {
-        $this->migrate(
-            'test_wp',
-            'CREATE TABLE `test_wp` (
-                `id` int(11) NOT NULL AUTO_INCREMENT,
-                `name` varchar(255) NOT NULL,
-                `email` varchar(255) NOT NULL,
-                `created_at` datetime NOT NULL,
-                `updated_at` datetime NOT NULL,
-                PRIMARY KEY (`id`)
-            )'
-        );
-    }
+	public function __construct()
+	{
+		// @phpcs:ignore
+		// $this->migrate(
+		// 	'test_wp',
+		// 	'CREATE TABLE `test_wp` (
+		//         `id` int(11) NOT NULL AUTO_INCREMENT,
+		//         `name` varchar(255) NOT NULL,
+		//         `email` varchar(255) NOT NULL,
+		//         `created_at` datetime NOT NULL,
+		//         `updated_at` datetime NOT NULL,
+		//         PRIMARY KEY (`id`)
+		//     )'
+		// );
+	}
 
 }

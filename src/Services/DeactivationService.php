@@ -19,10 +19,10 @@ class DeactivationService
 	public function register()
 	{
 		// deactivation event handler
-        \register_deactivation_hook(
-            HOWDY_FILE,
-            [ __CLASS__, 'deactivate' ]
-        );
+		\register_deactivation_hook(
+			HOWDY_FILE,
+			[ __CLASS__, 'deactivate' ]
+		);
 	}
 
 	public static function deactivate()

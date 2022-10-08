@@ -38,7 +38,7 @@ class AdminMenuController extends BaseController
 	public function renderAdminMenu()
 	{
 		$menu_data = AdminMenuService::getInstance();
-		$data = $menu_data->getData();
+		$data      = $menu_data->getData();
 		$this->render( 'admin/admin-menu.php', $data );
 	}
 }
