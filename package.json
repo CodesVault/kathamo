@@ -1,6 +1,6 @@
 {
   "name": "howdy",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "WordPress plugin starter",
   "main": "index.js",
   "scripts": {
