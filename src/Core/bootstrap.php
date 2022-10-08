@@ -150,7 +150,7 @@ foreach ( new \DirectoryIterator( $file_path ) as $file_info ) {
 
 	require_once $file_info->getPathname();
 	$class_name = explode( '.', $file_info->getFilename() )[0];
-	if ( $class_name === 'MigrateCore' ) continue;	// @phpcs:ignore
+	if ( 'MigrateCore' === $class_name ) continue;
 
 	$class_name = '\Howdy\Database\Migrations\\' . $class_name;
 	$class_name::getInstance();
