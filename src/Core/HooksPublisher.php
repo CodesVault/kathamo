@@ -20,22 +20,17 @@ class HooksPublisher
 
     public function publish()
     {
-        // activation event handler
-        \register_activation_hook(
-            HOWDY_FILE,
-            [ ActivationService::class, 'activate' ]
-        );
+		// list of all those classes which need to register hooks.
+        $class_list = [
+			ActivationService::class,
+			DeactivationService::class,
+			AssetsManager::class,
+			AdminMenuController::class,
+		];
 
-        // deactivation event handler
-        \register_deactivation_hook(
-            HOWDY_FILE,
-            [ DeactivationService::class, 'deactivate' ]
-        );
-
-		// enqueue plugins assets
-		AssetsManager::getInstance()->register();
-
-		// load admin menu page
-		AdminMenuController::getInstance()->register();
+		// if a controller or service need to register hooks all the time.
+		foreach ( $class_list as $class ) {
+			$class::getInstance()->register();
+		}
     }
 }
