@@ -2,6 +2,8 @@
 
 namespace Howdy\Services;
 
+use Howdy\Core\Lib\SingleTon;
+
 /**
  * Plugin Deactivation Service.
  * Provides functionality for plugin deactivation event.
@@ -12,6 +14,17 @@ namespace Howdy\Services;
  */
 class DeactivationService
 {
+	use SingleTon;
+
+	public function register()
+	{
+		// deactivation event handler
+        \register_deactivation_hook(
+            HOWDY_FILE,
+            [ __CLASS__, 'deactivate' ]
+        );
+	}
+
 	public static function deactivate()
 	{
 		// do something
