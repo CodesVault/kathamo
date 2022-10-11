@@ -18,6 +18,7 @@ Otherwise follow this process:
 <br>
 
 If you want to enqueue unminified assets then change `HOWDY_DEV_MODE` to `true` for loading unminified assets.
+<p>TailwindCSS support also added. To watch changes <code>npm run tailwindcss:admin</code> or <code>npm run tailwindcss:public</code></p>
 
 <br>
 <br>
