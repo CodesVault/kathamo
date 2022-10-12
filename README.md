@@ -1,5 +1,5 @@
 # Howdy
-WordPress plugin starter. Based on "Service Provider" design pattern.
+WordPress plugin starter. MVC kinda design pattern.
 
 <br>
 <br>
