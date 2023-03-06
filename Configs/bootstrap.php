@@ -144,7 +144,7 @@ spl_autoload_register(
  * @author  CodesVault, Keramot UL Islam <sourav926>
  * @since   0.0.3
  */
-$file_path = HOWDY_DIR_PATH . '/src/Database/Migrations/';
+$file_path = HOWDY_DIR_PATH . '/Database/Migrations/';
 foreach ( new \DirectoryIterator( $file_path ) as $file_info ) {
 	if ( $file_info->isDot() || $file_info->getExtension() !== 'php' ) continue;
 

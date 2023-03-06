@@ -17,6 +17,14 @@ final class HowdyCore
 
 	public function __construct()
 	{
-		HooksPublisher::getInstance()->publish();
+		$this->load();
+	}
+
+	private function load()
+	{
+		if (class_exists('ProBootManager')) {
+			return ProBootManager::getInstance()->run();
+		}
+		BootManager::getInstance()->run();
 	}
 }
