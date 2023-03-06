@@ -20,7 +20,7 @@ class BootManager
 
 	protected $registerList = [];
 
-	function __construct()
+	public function __construct()
 	{
 		$this->setRegisterList();
 	}
@@ -32,7 +32,7 @@ class BootManager
 	 */
 	public function run()
 	{
-		if ( empty( $registerList ) ) {
+		if ( empty( $this->registerList ) ) {
 			return false;
 		}
 

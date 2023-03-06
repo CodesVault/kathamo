@@ -22,9 +22,9 @@ final class HowdyCore
 
 	private function load()
 	{
-		if (class_exists('ProBootManager')) {
-			return ProBootManager::getInstance()->run();
-		}
+		// if (class_exists('ProBootManager')) {
+		// 	return ProBootManager::getInstance()->run();
+		// }
 		BootManager::getInstance()->run();
 	}
 }
