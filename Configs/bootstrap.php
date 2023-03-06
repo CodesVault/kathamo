@@ -44,7 +44,7 @@ if ( ! function_exists( 'howdy_asset_url' ) ) {
 	 */
 	function howdy_asset_url($path)
 	{
-		return howdy_url( "assets/" . $path );
+		return howdy_url( "assets" . $path );
 	}
 }
 
@@ -85,7 +85,7 @@ if ( ! function_exists( 'howdy_render_template' ) ) {
 	 */
 	function howdy_render_template($file_path, $data = array())
 	{
-		$file = HOWDY_DIR_PATH . "src/" . $file_path;
+		$file = HOWDY_DIR_PATH . "app" . $file_path;
 		if ( ! file_exists( $file ) ) {
 			throw new \Exception( "File not found" );
 		}
@@ -111,7 +111,7 @@ if ( ! function_exists( 'howdy_render_view_template' ) ) {
 	 */
 	function howdy_render_view_template($file_path, $data = array())
 	{
-		return howdy_render_template( "Views/" . $file_path, $data );
+		return howdy_render_template( "/Views" . $file_path, $data );
 	}
 }
 
@@ -130,7 +130,7 @@ spl_autoload_register(
 		if ( $arr[0] !== $namespace_root ) return;
 		array_shift( $arr );
 
-		$file = HOWDY_DIR_PATH . '/src/' . implode( '/', $arr ) . '.php';
+		$file = HOWDY_DIR_PATH . '/app/' . implode( '/', $arr ) . '.php';
 		if ( ! file_exists( $file ) ) return;
 
 		require_once $file;

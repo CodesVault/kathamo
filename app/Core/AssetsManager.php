@@ -36,14 +36,14 @@ class AssetsManager
 	{
 		wp_enqueue_style(
 			howdy_prefix( 'admin-css' ),
-			howdy_asset_url( "admin/css/admin{$this->extension_prefix}.css" ),
+			howdy_asset_url( "/admin/css/admin{$this->extension_prefix}.css" ),
 			[],
 			HOWDY_VERSION
 		);
 
 		wp_enqueue_script(
 			howdy_prefix( 'admin-js' ),
-			howdy_asset_url( "admin/js/admin{$this->extension_prefix}.js" ),
+			howdy_asset_url( "/admin/js/admin{$this->extension_prefix}.js" ),
 			[],
 			HOWDY_VERSION,
 			true
@@ -54,14 +54,14 @@ class AssetsManager
 	{
 		wp_enqueue_style(
 			howdy_prefix( 'public-css' ),
-			howdy_asset_url( "public/css/public{$this->extension_prefix}.css" ),
+			howdy_asset_url( "/public/css/public{$this->extension_prefix}.css" ),
 			[],
 			HOWDY_VERSION,
 		);
 
 		wp_enqueue_script(
 			howdy_prefix( 'public-js' ),
-			howdy_asset_url( "public/js/public{$this->extension_prefix}.js" ),
+			howdy_asset_url( "/public/js/public{$this->extension_prefix}.js" ),
 			[],
 			HOWDY_VERSION,
 			true

@@ -1,6 +1,6 @@
 === Howdy ===
 Plugin Name: Howdy
-Version: 0.0.1
+Version: 0.0.6
 Author: codesVault
 Author URI: https://github.com/CodesVault/
 Contributors: codesVault, sourav926
