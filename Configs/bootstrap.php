@@ -1,10 +1,7 @@
 <?php
 
-define( 'HOWDY', 'howdy' );
-define( 'HOWDY_VERSION', '0.0.7' );
 define( 'HOWDY_DIR_PATH', plugin_dir_path( HOWDY_FILE ) );
 define( 'HOWDY_PLUGIN_URL', plugins_url( '/', HOWDY_FILE ) );
-define( 'HOWDY_DEV_MODE', false );
 
 
 if ( ! function_exists( 'howdy_get_config' ) ) {
@@ -39,7 +36,7 @@ if ( ! function_exists( 'howdy_prefix' ) ) {
 	 */
 	function howdy_prefix($name)
 	{
-		return HOWDY . "-" . $name;
+		return howdy_get_config('plugin_slug') . "-" . $name;
 	}
 }
 
@@ -119,7 +116,7 @@ if ( ! function_exists( 'howdy_render_template' ) ) {
 		if ( ! is_array( $data ) ) {
 			throw new \Exception( "Expected array as data" );
 		}
-		extract( $data, EXTR_PREFIX_SAME, 'howdy' );	// @phpcs:ignore
+		extract( $data, EXTR_PREFIX_SAME, howdy_get_config('plugin_prefix') );	// @phpcs:ignore
 
 		return require_once $file;
 	}

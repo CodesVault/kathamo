@@ -17,9 +17,12 @@ class AssetsManager
 	use SingleTon;
 
 	private $extension_prefix = '.min';
+	private $configs = [];
 
 	public function register()
 	{
+		$this->configs = howdy_get_config();
+
 		$this->before_register_assets();
 		add_action( 'admin_enqueue_scripts', [ $this, 'admin_scripts' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'public_scripts' ] );
@@ -27,7 +30,7 @@ class AssetsManager
 
 	private function before_register_assets()
 	{
-		if ( \HOWDY_DEV_MODE ) {
+		if ( $this->configs['dev_mode'] ) {
 			$this->extension_prefix = '';
 		}
 	}
@@ -38,14 +41,14 @@ class AssetsManager
 			howdy_prefix( 'admin-css' ),
 			howdy_asset_url( "/admin/css/admin{$this->extension_prefix}.css" ),
 			[],
-			HOWDY_VERSION
+			$this->configs['plugin_version']
 		);
 
 		wp_enqueue_script(
 			howdy_prefix( 'admin-js' ),
 			howdy_asset_url( "/admin/js/admin{$this->extension_prefix}.js" ),
 			[],
-			HOWDY_VERSION,
+			$this->configs['plugin_version'],
 			true
 		);
 	}
@@ -56,16 +59,15 @@ class AssetsManager
 			howdy_prefix( 'public-css' ),
 			howdy_asset_url( "/public/css/public{$this->extension_prefix}.css" ),
 			[],
-			HOWDY_VERSION,
+			$this->configs['plugin_version'],
 		);
 
 		wp_enqueue_script(
 			howdy_prefix( 'public-js' ),
 			howdy_asset_url( "/public/js/public{$this->extension_prefix}.js" ),
 			[],
-			HOWDY_VERSION,
+			$this->configs['plugin_version'],
 			true
 		);
 	}
-
 }
