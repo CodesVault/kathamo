@@ -1,5 +1,32 @@
 <?php
 
+define( 'HOWDY', 'howdy' );
+define( 'HOWDY_VERSION', '0.0.7' );
+define( 'HOWDY_DIR_PATH', plugin_dir_path( HOWDY_FILE ) );
+define( 'HOWDY_PLUGIN_URL', plugins_url( '/', HOWDY_FILE ) );
+define( 'HOWDY_DEV_MODE', false );
+
+
+if ( ! function_exists( 'howdy_get_config' ) ) {
+	/**
+	 * get configs.
+	 *
+	 * @param string $name - plugin name.
+	 *
+	 * @package howdy
+	 * @author  CodesVault, Keramot UL Islam <sourav926>
+	 * @since   0.0.7
+	 */
+	function howdy_get_config($name = '')
+	{
+		$configs = require_once HOWDY_DIR_PATH . '/Configs/config.php';
+		if ( $name ) {
+			return isset($configs[$name]) ? $configs[$name] : false;
+		}
+		return $configs;
+	}
+}
+
 if ( ! function_exists( 'howdy_prefix' ) ) {
 	/**
 	 * Add prefix for the given string.
@@ -113,46 +140,4 @@ if ( ! function_exists( 'howdy_render_view_template' ) ) {
 	{
 		return howdy_render_template( "/Views" . $file_path, $data );
 	}
-}
-
-/**
- * Autoloader for classes
- *
- * @package howdy
- * @author  CodesVault, Keramot UL Islam <sourav926>
- * @since   0.0.1
- */
-spl_autoload_register(
-	function ($class) {
-		$arr = explode( "\\", $class );
-
-		$namespace_root = ucfirst( HOWDY );
-		if ( $arr[0] !== $namespace_root ) return;
-		array_shift( $arr );
-
-		$file = HOWDY_DIR_PATH . '/app/' . implode( '/', $arr ) . '.php';
-		if ( ! file_exists( $file ) ) return;
-
-		require_once $file;
-	}
-);
-
-/**
- * Auto load migration files and run migrations.
- *
- * @package howdy
- * @author  CodesVault, Keramot UL Islam <sourav926>
- * @since   0.0.3
- */
-$file_path = HOWDY_DIR_PATH . '/Database/Migrations/';
-foreach ( new \DirectoryIterator( $file_path ) as $file_info ) {
-	if ( $file_info->isDot() || $file_info->getExtension() !== 'php' ) continue;
-
-	require_once $file_info->getPathname();
-	$class_name = explode( '.', $file_info->getFilename() )[0];
-	if ( 'MigrateCore' === $class_name ) continue;
-
-	$class_name = '\Howdy\Database\Migrations\\' . $class_name;
-	$class_name::getInstance();
-	sleep( 1 );
 }

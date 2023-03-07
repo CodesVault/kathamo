@@ -1,6 +1,6 @@
 <?php
 
-namespace Howdy\Controllers;
+namespace Howdy\App\Controllers;
 
 /**
  * Base Controller.

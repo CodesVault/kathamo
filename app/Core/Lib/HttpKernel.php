@@ -1,6 +1,6 @@
 <?php
 
-namespace Howdy\Core\Lib;
+namespace Howdy\App\Core\Lib;
 
 /**
  * Handle HTTP requests
@@ -31,7 +31,7 @@ class HttpKernel
 	 *
 	 * @param (string) $route
 	 * @param (array)  $args
-	 * @return \Howdy\Helpers\Response
+	 * @return \Howdy\App\Helpers\Response
 	 */
 	public static function post($route, $args = [])
 	{
@@ -48,7 +48,7 @@ class HttpKernel
 	 *
 	 * @param (string) $route
 	 * @param (array)  $args
-	 * @return \Howdy\Helpers\Response
+	 * @return \Howdy\App\Helpers\Response
 	 */
 	public static function get($route, $args = [])
 	{

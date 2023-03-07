@@ -1,11 +1,11 @@
 <?php
 
-namespace Howdy\Core;
+namespace Howdy\App\Core;
 
-use Howdy\Controllers\AdminMenuController;
-use Howdy\Core\Lib\SingleTon;
-use Howdy\Services\ActivationService;
-use Howdy\Services\DeactivationService;
+use Howdy\App\Controllers\AdminMenuController;
+use Howdy\App\Core\Lib\SingleTon;
+use Howdy\App\Services\ActivationService;
+use Howdy\App\Services\DeactivationService;
 
 /**
  * WP action/filter hooks publisher.

@@ -1,8 +1,8 @@
 <?php
 
-namespace Howdy\Core;
+namespace Howdy\App\Core;
 
-use Howdy\Core\Lib\SingleTon;
+use Howdy\App\Core\Lib\SingleTon;
 
 /**
  * Main Class for plugin

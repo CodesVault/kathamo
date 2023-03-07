@@ -1,9 +1,9 @@
 <?php
 
-namespace Howdy\Controllers;
+namespace Howdy\App\Controllers;
 
-use Howdy\Core\Lib\SingleTon;
-use Howdy\Services\AdminMenuService;
+use Howdy\App\Core\Lib\SingleTon;
+use Howdy\App\Services\AdminMenuService;
 
 /**
  * Admin pages Controller

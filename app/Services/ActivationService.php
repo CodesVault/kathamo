@@ -1,8 +1,8 @@
 <?php
 
-namespace Howdy\Services;
+namespace Howdy\App\Services;
 
-use Howdy\Core\Lib\SingleTon;
+use Howdy\App\Core\Lib\SingleTon;
 
 /**
  * Plugin Activation Service.
