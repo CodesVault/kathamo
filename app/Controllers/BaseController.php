@@ -2,6 +2,8 @@
 
 namespace Howdy\App\Controllers;
 
+use Howdy\App\Controllers\Middleware\Middleware;
+
 /**
  * Base Controller.
  *
@@ -36,5 +38,10 @@ class BaseController
 		ob_start();
 		howdy_render_view_template( $file_path, $data );
 		return ob_get_clean();
+	}
+
+	public function middleware($key)
+	{
+		return Middleware::resolve($key);
 	}
 }
