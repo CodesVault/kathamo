@@ -5,10 +5,6 @@ namespace Kathamo\App\Controllers;
 use Kathamo\App\Core\Lib\SingleTon;
 use Kathamo\App\Services\AdminMenuService;
 
-/**
- * Admin pages Controller
- * Provides functionality for plugin dashboar pages.
- */
 class AdminMenuController extends BaseController
 {
 	use SingleTon;

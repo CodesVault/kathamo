@@ -4,10 +4,6 @@ namespace Kathamo\App\Services;
 
 use Kathamo\App\Core\Lib\SingleTon;
 
-/**
- * Plugin Activation Service.
- * Provides functionality for plugin activation event.
- */
 class ActivationService
 {
 	use SingleTon;

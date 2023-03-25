@@ -20,7 +20,8 @@
     "require-dev": {
         "symfony/var-dumper": "^5.4",
         "squizlabs/php_codesniffer": "^3.7",
-        "wp-coding-standards/wpcs": "^2.3"
+        "wp-coding-standards/wpcs": "^2.3",
+        "codesvault/wp-seeder": "^1.0"
     },
     "require": {
         "codesvault/howdy-qb": "^1.2"

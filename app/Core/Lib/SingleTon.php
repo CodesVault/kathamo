@@ -2,9 +2,6 @@
 
 namespace Kathamo\App\Core\Lib;
 
-/**
- * Singletone trait.
- */
 trait SingleTon
 {
 	private static $instance = null;

@@ -2,9 +2,6 @@
 
 namespace Kathamo\App\Core\Lib;
 
-/**
- * Handle HTTP requests
- */
 class HttpKernel
 {
 	private static $base_url  = 'https://bdapis.herokuapp.com/';

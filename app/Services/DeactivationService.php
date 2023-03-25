@@ -4,10 +4,6 @@ namespace Kathamo\App\Services;
 
 use Kathamo\App\Core\Lib\SingleTon;
 
-/**
- * Plugin Deactivation Service.
- * Provides functionality for plugin deactivation event.
- */
 class DeactivationService
 {
 	use SingleTon;

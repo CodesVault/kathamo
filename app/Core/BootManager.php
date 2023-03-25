@@ -7,9 +7,6 @@ use Kathamo\App\Core\Lib\SingleTon;
 use Kathamo\App\Services\ActivationService;
 use Kathamo\App\Services\DeactivationService;
 
-/**
- * WP action/filter hooks publisher.
- */
 class BootManager
 {
 	use SingleTon;

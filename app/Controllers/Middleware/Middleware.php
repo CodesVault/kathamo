@@ -4,10 +4,6 @@ namespace Kathamo\App\Controllers\Middleware;
 
 use Exception;
 
-/**
- * Middleware main class.
- * Map all middlewares with key and class name.
- */
 class Middleware
 {
 	const Map = [

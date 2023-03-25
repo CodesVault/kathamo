@@ -4,9 +4,6 @@ namespace Kathamo\App\Core;
 
 use Kathamo\App\Core\Lib\SingleTon;
 
-/**
- * Main Class for plugin
- */
 final class Core
 {
 	use SingleTon;

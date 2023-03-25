@@ -4,9 +4,6 @@ namespace Kathamo\App\Controllers;
 
 use Kathamo\App\Controllers\Middleware\Middleware;
 
-/**
- * Base Controller.
- */
 class BaseController
 {
 	/**

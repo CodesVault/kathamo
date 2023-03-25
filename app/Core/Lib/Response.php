@@ -2,9 +2,6 @@
 
 namespace Kathamo\App\Core\Lib;
 
-/**
- * Handle HTTP response attributes.
- */
 class Response
 {
 	private $response;

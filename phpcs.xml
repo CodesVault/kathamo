@@ -35,6 +35,7 @@
 		<exclude name="Squiz.Commenting.FunctionComment.MissingParamTag" />
 		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop" />
 		<exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop" />
+		<exclude name="Squiz.Commenting.ClassComment.Missing" />
     </rule>
     <rule ref="WordPress-Docs" />
     <rule ref="Squiz.Commenting.DocCommentAlignment" />

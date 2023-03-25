@@ -4,10 +4,6 @@ namespace Kathamo\App\Core;
 
 use Kathamo\App\Core\Lib\SingleTon;
 
-/**
- * Assets Service Provider.
- * it registers all assets of the plugin.
- */
 class AssetsManager
 {
 	use SingleTon;

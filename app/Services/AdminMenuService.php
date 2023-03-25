@@ -4,10 +4,6 @@ namespace Kathamo\App\Services;
 
 use Kathamo\App\Core\Lib\SingleTon;
 
-/**
- * Service class for admin menu.
- * Reuseble functionality & business logics provider.
- */
 class AdminMenuService
 {
 	use SingleTon;
