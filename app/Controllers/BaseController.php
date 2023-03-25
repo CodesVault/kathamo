@@ -1,15 +1,11 @@
 <?php
 
-namespace Howdy\App\Controllers;
+namespace Kathamo\App\Controllers;
 
-use Howdy\App\Controllers\Middleware\Middleware;
+use Kathamo\App\Controllers\Middleware\Middleware;
 
 /**
  * Base Controller.
- *
- * @package     howdy
- * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.1
  */
 class BaseController
 {
@@ -33,10 +29,10 @@ class BaseController
 	public function render( $file_path, $data = [], $buffer = false )
 	{
 		if ( ! $buffer ) {
-			return howdy_render_view_template( $file_path, $data );
+			return kathamo_render_view_template( $file_path, $data );
 		}
 		ob_start();
-		howdy_render_view_template( $file_path, $data );
+		kathamo_render_view_template( $file_path, $data );
 		return ob_get_clean();
 	}
 

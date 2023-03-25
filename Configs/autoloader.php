@@ -1,11 +1,7 @@
 <?php
 
 /**
- * Autoloader for classes
- *
- * @package howdy
- * @author  CodesVault, Keramot UL Islam <sourav926>
- * @since   0.0.1
+ * Autoloader for project classes
  */
 spl_autoload_register(
 	function ($class) {
@@ -13,7 +9,7 @@ spl_autoload_register(
 		array_shift( $arr );
 		array_shift( $arr );
 
-		$file = HOWDY_DIR_PATH . '/app/' . implode( '/', $arr ) . '.php';
+		$file = KATHAMO_DIR_PATH . '/app/' . implode( '/', $arr ) . '.php';
 		if ( ! file_exists( $file ) ) return;
 
 		require_once $file;
@@ -22,12 +18,8 @@ spl_autoload_register(
 
 /**
  * Auto load migration files and run migrations.
- *
- * @package howdy
- * @author  CodesVault, Keramot UL Islam <sourav926>
- * @since   0.0.3
  */
-$file_path = HOWDY_DIR_PATH . '/Database/Migrations/';
+$file_path = KATHAMO_DIR_PATH . '/Database/Migrations/';
 foreach ( new \DirectoryIterator( $file_path ) as $file_info ) {
 	if ( $file_info->isDot() || $file_info->getExtension() !== 'php' ) continue;
 

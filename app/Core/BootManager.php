@@ -1,18 +1,14 @@
 <?php
 
-namespace Howdy\App\Core;
+namespace Kathamo\App\Core;
 
-use Howdy\App\Controllers\AdminMenuController;
-use Howdy\App\Core\Lib\SingleTon;
-use Howdy\App\Services\ActivationService;
-use Howdy\App\Services\DeactivationService;
+use Kathamo\App\Controllers\AdminMenuController;
+use Kathamo\App\Core\Lib\SingleTon;
+use Kathamo\App\Services\ActivationService;
+use Kathamo\App\Services\DeactivationService;
 
 /**
  * WP action/filter hooks publisher.
- *
- * @package     howdy
- * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.6
  */
 class BootManager
 {

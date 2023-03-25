@@ -1,7 +1,11 @@
-# Howdy
-WordPress plugin starter. MVC kinda design pattern.
+# Kathamo
+Framework for WordPress plugin development.
 
 <br>
+<br>
+
+> **It is recommended to use [Kathamo Generator](https://github.com/CodesVault/kathamo-generator) to generate your custom skeleton of this Framework**
+
 <br>
 
 ## Environment setup

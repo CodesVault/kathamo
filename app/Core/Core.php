@@ -1,17 +1,13 @@
 <?php
 
-namespace Howdy\App\Core;
+namespace Kathamo\App\Core;
 
-use Howdy\App\Core\Lib\SingleTon;
+use Kathamo\App\Core\Lib\SingleTon;
 
 /**
  * Main Class for plugin
- *
- * @package     howdy
- * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.1
  */
-final class HowdyCore
+final class Core
 {
 	use SingleTon;
 

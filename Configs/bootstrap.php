@@ -1,22 +1,20 @@
 <?php
 
-define( 'HOWDY_DIR_PATH', plugin_dir_path( HOWDY_FILE ) );
-define( 'HOWDY_PLUGIN_URL', plugins_url( '/', HOWDY_FILE ) );
+define( 'KATHAMO_DIR_PATH', plugin_dir_path( KATHAMO_FILE ) );
+define( 'KATHAMO_PLUGIN_URL', plugins_url( '/', KATHAMO_FILE ) );
 
 
-if ( ! function_exists( 'howdy_get_config' ) ) {
+if ( ! function_exists( 'kathamo_get_config' ) ) {
 	/**
 	 * get configs.
 	 *
 	 * @param string $name - plugin name.
 	 *
-	 * @package howdy
-	 * @author  CodesVault, Keramot UL Islam <sourav926>
-	 * @since   0.0.7
+	 * @return string
 	 */
-	function howdy_get_config($name = '')
+	function kathamo_get_config($name = '')
 	{
-		$configs = require_once HOWDY_DIR_PATH . '/Configs/config.php';
+		$configs = require_once KATHAMO_DIR_PATH . '/Configs/config.php';
 		if ( $name ) {
 			return isset($configs[$name]) ? $configs[$name] : false;
 		}
@@ -24,55 +22,49 @@ if ( ! function_exists( 'howdy_get_config' ) ) {
 	}
 }
 
-if ( ! function_exists( 'howdy_prefix' ) ) {
+if ( ! function_exists( 'kathamo_prefix' ) ) {
 	/**
 	 * Add prefix for the given string.
 	 *
 	 * @param string $name - plugin name.
 	 *
-	 * @package howdy
-	 * @author  CodesVault, Keramot UL Islam <sourav926>
-	 * @since   0.0.1
+	 * @return string
 	 */
-	function howdy_prefix($name)
+	function kathamo_prefix($name)
 	{
-		return howdy_get_config('plugin_slug') . "-" . $name;
+		return kathamo_get_config('plugin_slug') . "-" . $name;
 	}
 }
 
-if ( ! function_exists( 'howdy_url' ) ) {
+if ( ! function_exists( 'kathamo_url' ) ) {
 	/**
 	 * Add prefix for the given string.
 	 *
 	 * @param  string $path
 	 *
-	 * @package howdy
-	 * @author  CodesVault, Keramot UL Islam <sourav926>
-	 * @since   0.0.1
+	 * @return string
 	 */
-	function howdy_url($path)
+	function kathamo_url($path)
 	{
-		return HOWDY_PLUGIN_URL . $path;
+		return KATHAMO_PLUGIN_URL . $path;
 	}
 }
 
-if ( ! function_exists( 'howdy_asset_url' ) ) {
+if ( ! function_exists( 'kathamo_asset_url' ) ) {
 	/**
 	 * Add prefix for the given string.
 	 *
 	 * @param  string $path
 	 *
-	 * @package howdy
-	 * @author  CodesVault, Keramot UL Islam <sourav926>
-	 * @since   0.0.1
+	 * @return string
 	 */
-	function howdy_asset_url($path)
+	function kathamo_asset_url($path)
 	{
-		return howdy_url( "assets" . $path );
+		return kathamo_url( "assets" . $path );
 	}
 }
 
-if ( ! function_exists( 'howdy_wp_ajax' ) ) {
+if ( ! function_exists( 'kathamo_wp_ajax' ) ) {
 	/**
 	 * Wrapper function for wp_ajax_* and wp_ajax_nopriv_*
 	 *
@@ -80,11 +72,9 @@ if ( ! function_exists( 'howdy_wp_ajax' ) ) {
 	 * @param string $callback - callback method name
 	 * @param bool   $public - is this a public ajax action
 	 *
-	 * @package howdy
-	 * @author  CodesVault, Keramot UL Islam <sourav926>
-	 * @since   0.0.1
+	 * @return mixed
 	 */
-	function howdy_wp_ajax($action, $callback, $public = false)
+	function kathamo_wp_ajax($action, $callback, $public = false)
 	{
 		add_action( 'wp_ajax_' . $action, $callback );
 		if ( $public ) {
@@ -93,48 +83,44 @@ if ( ! function_exists( 'howdy_wp_ajax' ) ) {
 	}
 }
 
-if ( ! function_exists( 'howdy_render_template' ) ) {
+if ( ! function_exists( 'kathamo_render_template' ) ) {
 	/**
 	 * Require a Template file.
 	 *
 	 * @param  string $file_path
 	 * @param array  $data
 	 *
-	 * @package howdy
-	 * @author  CodesVault, Keramot UL Islam <sourav926>
-	 * @since   0.0.1
+	 * @return mixed
 	 *
 	 * @throws \Exception - if file not found throw exception
 	 * @throws \Exception - if data is not array throw exception
 	 */
-	function howdy_render_template($file_path, $data = array())
+	function kathamo_render_template($file_path, $data = array())
 	{
-		$file = HOWDY_DIR_PATH . "app" . $file_path;
+		$file = KATHAMO_DIR_PATH . "app" . $file_path;
 		if ( ! file_exists( $file ) ) {
 			throw new \Exception( "File not found" );
 		}
 		if ( ! is_array( $data ) ) {
 			throw new \Exception( "Expected array as data" );
 		}
-		extract( $data, EXTR_PREFIX_SAME, howdy_get_config('plugin_prefix') );	// @phpcs:ignore
+		extract( $data, EXTR_PREFIX_SAME, kathamo_get_config('plugin_prefix') );	// @phpcs:ignore
 
 		return require_once $file;
 	}
 }
 
-if ( ! function_exists( 'howdy_render_view_template' ) ) {
+if ( ! function_exists( 'kathamo_render_view_template' ) ) {
 	/**
 	 * Require a View template file.
 	 *
 	 * @param  string $file_path
 	 * @param array  $data
 	 *
-	 * @package howdy
-	 * @author  CodesVault, Keramot UL Islam <sourav926>
-	 * @since   0.0.1
+	 * @return mixed
 	 */
-	function howdy_render_view_template($file_path, $data = array())
+	function kathamo_render_view_template($file_path, $data = array())
 	{
-		return howdy_render_template( "/Views" . $file_path, $data );
+		return kathamo_render_template( "/Views" . $file_path, $data );
 	}
 }

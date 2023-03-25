@@ -1,16 +1,12 @@
 <?php
 
-namespace Howdy\App\Services;
+namespace Kathamo\App\Services;
 
-use Howdy\App\Core\Lib\SingleTon;
+use Kathamo\App\Core\Lib\SingleTon;
 
 /**
  * Plugin Activation Service.
  * Provides functionality for plugin activation event.
- *
- * @package     howdy
- * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.4
  */
 class ActivationService
 {
@@ -20,7 +16,7 @@ class ActivationService
 	{
 		// activation event handler
 		\register_activation_hook(
-			HOWDY_FILE,
+			KATHAMO_FILE,
 			[ __CLASS__, 'activate' ]
 		);
 	}

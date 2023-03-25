@@ -1,16 +1,12 @@
 <?php
 
-namespace Howdy\App\Controllers\Middleware;
+namespace Kathamo\App\Controllers\Middleware;
 
 use Exception;
 
 /**
  * Middleware main class.
  * Map all middlewares with key and class name.
- *
- * @package     howdy
- * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.8
  */
 class Middleware
 {

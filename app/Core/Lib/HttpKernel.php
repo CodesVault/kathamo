@@ -1,13 +1,9 @@
 <?php
 
-namespace Howdy\App\Core\Lib;
+namespace Kathamo\App\Core\Lib;
 
 /**
  * Handle HTTP requests
- *
- * @package     howdy
- * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.1
  */
 class HttpKernel
 {
@@ -31,7 +27,7 @@ class HttpKernel
 	 *
 	 * @param (string) $route
 	 * @param (array)  $args
-	 * @return \Howdy\App\Helpers\Response
+	 * @return \Kathamo\App\Helpers\Response
 	 */
 	public static function post($route, $args = [])
 	{
@@ -48,7 +44,7 @@ class HttpKernel
 	 *
 	 * @param (string) $route
 	 * @param (array)  $args
-	 * @return \Howdy\App\Helpers\Response
+	 * @return \Kathamo\App\Helpers\Response
 	 */
 	public static function get($route, $args = [])
 	{

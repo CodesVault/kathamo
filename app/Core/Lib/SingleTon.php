@@ -1,13 +1,9 @@
 <?php
 
-namespace Howdy\App\Core\Lib;
+namespace Kathamo\App\Core\Lib;
 
 /**
  * Singletone trait.
- *
- * @package     howdy
- * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.1
  */
 trait SingleTon
 {

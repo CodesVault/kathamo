@@ -1,16 +1,12 @@
 <?php
 
-namespace Howdy\App\Services;
+namespace Kathamo\App\Services;
 
-use Howdy\App\Core\Lib\SingleTon;
+use Kathamo\App\Core\Lib\SingleTon;
 
 /**
  * Service class for admin menu.
  * Reuseble functionality & business logics provider.
- *
- * @package     howdy
- * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.3
  */
 class AdminMenuService
 {

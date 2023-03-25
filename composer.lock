@@ -4,8 +4,71 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "93a4f558c9051e2b6717a64586f23864",
-    "packages": [],
+    "content-hash": "c0cdcf5139d9a749aa0a8958a200b64d",
+    "packages": [
+        {
+            "name": "codesvault/howdy-qb",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CodesVault/howdy_qb.git",
+                "reference": "ba6556c56b926745f63d921cf16439bdbec90399"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CodesVault/howdy_qb/zipball/ba6556c56b926745f63d921cf16439bdbec90399",
+                "reference": "ba6556c56b926745f63d921cf16439bdbec90399",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.7",
+                "symfony/var-dumper": "^5.4",
+                "wp-coding-standards/wpcs": "^2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CodesVault\\Howdyqb\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CodesVault",
+                    "email": "codesvault@gmail.com"
+                },
+                {
+                    "name": "Keramot UL Islam",
+                    "email": "keramotul.islam@gmail.com"
+                }
+            ],
+            "description": "Mysql Query Builder for WordPress",
+            "keywords": [
+                "builder",
+                "database",
+                "mysql",
+                "mysqli",
+                "pdo",
+                "query",
+                "query builder",
+                "wordpress",
+                "wp"
+            ],
+            "support": {
+                "issues": "https://github.com/CodesVault/howdy_qb/issues",
+                "source": "https://github.com/CodesVault/howdy_qb/tree/1.2.0"
+            },
+            "time": "2023-01-09T09:32:38+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",

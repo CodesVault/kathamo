@@ -1,16 +1,12 @@
 <?php
 
-namespace Howdy\App\Core;
+namespace Kathamo\App\Core;
 
-use Howdy\App\Core\Lib\SingleTon;
+use Kathamo\App\Core\Lib\SingleTon;
 
 /**
  * Assets Service Provider.
  * it registers all assets of the plugin.
- *
- * @package     howdy
- * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.1
  */
 class AssetsManager
 {
@@ -21,7 +17,7 @@ class AssetsManager
 
 	public function register()
 	{
-		$this->configs = howdy_get_config();
+		$this->configs = kathamo_get_config();
 
 		$this->before_register_assets();
 		add_action( 'admin_enqueue_scripts', [ $this, 'admin_scripts' ] );
@@ -38,15 +34,15 @@ class AssetsManager
 	public function admin_scripts()
 	{
 		wp_enqueue_style(
-			howdy_prefix( 'admin-css' ),
-			howdy_asset_url( "/admin/css/admin{$this->extension_prefix}.css" ),
+			kathamo_prefix( 'admin-css' ),
+			kathamo_asset_url( "/admin/css/admin{$this->extension_prefix}.css" ),
 			[],
 			$this->configs['plugin_version']
 		);
 
 		wp_enqueue_script(
-			howdy_prefix( 'admin-js' ),
-			howdy_asset_url( "/admin/js/admin{$this->extension_prefix}.js" ),
+			kathamo_prefix( 'admin-js' ),
+			kathamo_asset_url( "/admin/js/admin{$this->extension_prefix}.js" ),
 			[],
 			$this->configs['plugin_version'],
 			true
@@ -56,15 +52,15 @@ class AssetsManager
 	public function public_scripts()
 	{
 		wp_enqueue_style(
-			howdy_prefix( 'public-css' ),
-			howdy_asset_url( "/public/css/public{$this->extension_prefix}.css" ),
+			kathamo_prefix( 'public-css' ),
+			kathamo_asset_url( "/public/css/public{$this->extension_prefix}.css" ),
 			[],
 			$this->configs['plugin_version'],
 		);
 
 		wp_enqueue_script(
-			howdy_prefix( 'public-js' ),
-			howdy_asset_url( "/public/js/public{$this->extension_prefix}.js" ),
+			kathamo_prefix( 'public-js' ),
+			kathamo_asset_url( "/public/js/public{$this->extension_prefix}.js" ),
 			[],
 			$this->configs['plugin_version'],
 			true

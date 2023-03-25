@@ -1,17 +1,13 @@
 <?php
 
-namespace Howdy\App\Controllers;
+namespace Kathamo\App\Controllers;
 
-use Howdy\App\Core\Lib\SingleTon;
-use Howdy\App\Services\AdminMenuService;
+use Kathamo\App\Core\Lib\SingleTon;
+use Kathamo\App\Services\AdminMenuService;
 
 /**
  * Admin pages Controller
  * Provides functionality for plugin dashboar pages.
- *
- * @package     howdy
- * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.1
  */
 class AdminMenuController extends BaseController
 {

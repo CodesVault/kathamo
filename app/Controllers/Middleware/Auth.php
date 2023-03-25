@@ -1,13 +1,9 @@
 <?php
 
-namespace Howdy\App\Controllers\Middleware;
+namespace Kathamo\App\Controllers\Middleware;
 
 /**
  * Auth middleware.
- *
- * @package     howdy
- * @author      CodesVault, Keramot UL Islam <sourav926>
- * @since       0.0.8
  */
 class Auth
 {
