@@ -9,7 +9,7 @@
  * Author: CodesVault
  * Author URI: https://github.com/CodesVault
  * License: GPLv2 or later
- * Text Domain: howdy
+ * Text Domain: kathamo
  */
 
 use Kathamo\App\Core\Core;
