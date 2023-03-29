@@ -1,6 +1,6 @@
 <?php
 /**
- * @package howdy
+ * @package kathamo
  *
  * Plugin Name: Kathamo
  * Plugin URI:

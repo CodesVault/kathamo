@@ -17,10 +17,10 @@ class AdminMenuController extends BaseController
 	public function addAdminMenu()
 	{
 		add_menu_page(
-			__( 'Howdy', 'howdy' ),
-			__( 'Howdy', 'howdy' ),
+			__( 'Kathamo', 'kathamo' ),
+			__( 'Kathamo', 'kathamo' ),
 			'manage_options',
-			'howdy-wp',
+			'kathamo-wp',
 			[ $this, 'renderAdminMenu' ],
 			'dashicons-admin-generic',
 			40
