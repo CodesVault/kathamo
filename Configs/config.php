@@ -1,10 +1,14 @@
 <?php
 
 return array(
-	'plugin_prefix'		=> 'howdy',
-	'plugin_slug'		=> 'howdy',
-	'namaspace_root'	=> 'Kathamo\App',
-	'plugin_version'	=> '0.0.8',
-	'plugin_name'		=> 'Howdy',
+	'plugin_prefix'		=> 'kathamo',
+	'plugin_slug'		=> 'kathamo',
+	'namaspace_root'	=> 'Kathamo',
+	'plugin_version'	=> '1.0.0',
+	'plugin_name'		=> 'Kathamo',
 	'dev_mode'			=> false,
+	'root_dir'			=> dirname(__DIR__),
+	'middlewares'		=> [
+		'auth'	=> Kathamo\App\Controllers\Middleware\Auth::class,
+	],
 );

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b3c816d86c7c338a9e647653f2950ba",
+    "content-hash": "f18d2c7c43373e56938778a903ee3b2f",
     "packages": [
         {
             "name": "codesvault/howdy-qb",
@@ -70,6 +70,49 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "codesvault/kathamo-framework",
+            "version": "0.0.1",
+            "dist": {
+                "type": "path",
+                "url": "./kathamo-framework",
+                "reference": "0f4e0e3958eb0bd073faab14cb5da79745dabd40"
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "symfony/console": "5.4.13",
+                "symfony/filesystem": "5.4.13",
+                "symfony/finder": "5.4.11"
+            },
+            "bin": [
+                "bin/kathamo"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kathamo\\Framework\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CodesVault",
+                    "email": "codesvault@gmail.com"
+                },
+                {
+                    "name": "Keramot UL Islam (AbmSourav)",
+                    "email": "keramotul.islam@gmail.com"
+                }
+            ],
+            "description": "Core package for Kathamo.",
+            "transport-options": {
+                "relative": true
+            }
+        },
         {
             "name": "codesvault/wp-seeder",
             "version": "1.0.0",

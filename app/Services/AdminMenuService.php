@@ -11,8 +11,8 @@ class AdminMenuService
 	public function getData()
 	{
 		$data = [
-			'plugin_name' => 'Howdy',
-			'developed'   => 'Developed by',
+			'plugin_name' => 'Kathamo',
+			'developed'   => 'Author',
 			'author_name' => 'CodesVault',
 			'author_link' => 'https://github.com/CodesVault',
 		];
