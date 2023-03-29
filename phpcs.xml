@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<ruleset name="HowdyWP">
+<ruleset name="Kathamo">
 
     <arg name="extensions" value="php"/>
     <arg name="parallel" value="40" />

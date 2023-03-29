@@ -5,7 +5,7 @@
  * Plugin Name: Kathamo
  * Plugin URI:
  * Description: A Framework For WordPress plugin development.
- * Version: 0.0.8
+ * Version: 1.0.0
  * Author: CodesVault
  * Author URI: https://github.com/CodesVault
  * License: GPLv2 or later
