@@ -44,7 +44,7 @@ dd($data);  // debug data and die.
 
 ## SingleTon
 A trait for singleton is available. You can use it for creating single class instance.
-For example: check `HowdyCore` we have used `SingleTon`, then created class instance in `howdy.php > HowdyCore::getInstance()`.
+For example: check `Core` we have used `SingleTon`, then created class instance in `plugin.php > Core::getInstance()`.
 
 <br>
 <br>
