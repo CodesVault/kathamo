@@ -12,6 +12,12 @@
             "email": "keramotul.islam@gmail.com"
         }
     ],
+	"autoload": {
+        "psr-4": {
+            "Kathamo\\App\\": "app/",
+            "Kathamo\\Database\\": "database/"
+        }
+    },
     "scripts": {
         "phpcs": "phpcs ",
         "phpcbf": "phpcbf ",

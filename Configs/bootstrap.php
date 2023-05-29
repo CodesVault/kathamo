@@ -14,7 +14,7 @@ if ( ! function_exists( 'kathamo_get_config' ) ) {
 	 */
 	function kathamo_get_config($name = '')
 	{
-		$configs = require KATHAMO_DIR_PATH . '/Configs/config.php';
+		$configs = require KATHAMO_DIR_PATH . '/configs/config.php';
 		if ( $name ) {
 			return isset($configs[$name]) ? $configs[$name] : false;
 		}
