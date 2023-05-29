@@ -31,7 +31,7 @@
         "codesvault/kathamo-framework": "^0.0.1"
     },
     "require": {
-        "codesvault/howdy-qb": "^1.2"
+        "codesvault/howdy-qb": "^1.3"
     },
 	"repositories": [
 		{
