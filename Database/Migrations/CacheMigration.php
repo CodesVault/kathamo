@@ -11,7 +11,7 @@ class CacheMigration
 
 	public function __construct()
 	{
-		// DB::create('cache') // table name
+		// DB::create('cache')
 		// 	->column('ID')->bigInt()->unsigned()->autoIncrement()->primary()->required()
 		// 	->column('key')->string(255)->required()
 		// 	->column('data')->string(255)->default('NULL')
