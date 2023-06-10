@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Configurations for the plugin
+ *
+ * @package kathamo
+ */
 return array(
 	'plugin_prefix'		=> 'kathamo',
 	'plugin_slug'		=> 'kathamo',
