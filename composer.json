@@ -2,13 +2,14 @@
     "name": "codesvalut/kathamo",
     "description": "WordPress plugin starter",
     "type": "project",
+	"license": "GPL-2.0",
     "authors": [
         {
             "name": "CodesVault",
             "email": "codesvault@gmail.com"
         },
         {
-            "name": "AbmSourav",
+            "name": "Keramot UL Islam [AbmSourav]",
             "email": "keramotul.islam@gmail.com"
         }
     ],
