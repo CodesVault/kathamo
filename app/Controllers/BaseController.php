@@ -2,9 +2,9 @@
 
 namespace Kathamo\App\Controllers;
 
-use Kathamo\App\Controllers\Middleware\Middleware;
+use Kathamo\Framework\Lib\Controller;
 
-class BaseController
+class BaseController extends Controller
 {
 	/**
 	 * Register hooks callback
@@ -31,10 +31,5 @@ class BaseController
 		ob_start();
 		kathamo_render_view_template( $file_path, $data );
 		return ob_get_clean();
-	}
-
-	public function middleware($key)
-	{
-		return Middleware::resolve($key);
 	}
 }

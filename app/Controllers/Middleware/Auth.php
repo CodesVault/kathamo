@@ -2,10 +2,12 @@
 
 namespace Kathamo\App\Controllers\Middleware;
 
-class Auth
+use Kathamo\Framework\Lib\Middleware;
+
+class Auth extends Middleware
 {
 	public function handle()
 	{
-		print_r('Auth middleware called...');
+		// dump($this->getRequestParams(), 'Auth middleware called...');
 	}
 }

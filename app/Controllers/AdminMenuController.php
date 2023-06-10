@@ -4,6 +4,7 @@ namespace Kathamo\App\Controllers;
 
 use Kathamo\App\Core\Lib\SingleTon;
 use Kathamo\App\Services\AdminMenuService;
+use Kathamo\Framework\Lib\Http\Request;
 
 class AdminMenuController extends BaseController
 {
@@ -30,6 +31,13 @@ class AdminMenuController extends BaseController
 	public function renderAdminMenu()
 	{
 		// $this->middleware( 'auth' );
+
+		// $validate = $this->validate( [
+		// 	'page' => 'stringOnly',
+		// ] );
+
+		// $res = Request::get( 'https://jsonplaceholder.typicode.com/posts/1' );
+		// dump($validate->getData(), $res->getBody(), 'Response from jsonplaceholder');
 
 		$menu_data = AdminMenuService::getInstance();
 		$data      = $menu_data->getData();
