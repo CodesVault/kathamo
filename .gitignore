@@ -8,7 +8,7 @@ lerna-debug.log*
 .DS_Store
 
 # composer
-vendor
+vendor/
 
 kathamo-framework
 _kathamo-framework

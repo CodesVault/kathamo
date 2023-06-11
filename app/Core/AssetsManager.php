@@ -8,7 +8,7 @@ class AssetsManager
 {
 	use SingleTon;
 
-	private $extension_prefix = '.min';
+	private $version = '';
 	private $configs = [];
 
 	public function register()
@@ -23,24 +23,25 @@ class AssetsManager
 	private function before_register_assets()
 	{
 		if ( $this->configs['dev_mode'] ) {
-			$this->extension_prefix = '';
+			return $this->version = time();
 		}
+		$this->version = $this->configs['plugin_version'];
 	}
 
 	public function admin_scripts()
 	{
 		wp_enqueue_style(
 			kathamo_prefix( 'admin-css' ),
-			kathamo_asset_url( "/admin/css/admin{$this->extension_prefix}.css" ),
+			kathamo_asset_url( "/dist/admin.css" ),
 			[],
-			$this->configs['plugin_version']
+			$this->version
 		);
 
 		wp_enqueue_script(
 			kathamo_prefix( 'admin-js' ),
-			kathamo_asset_url( "/admin/js/admin{$this->extension_prefix}.js" ),
+			kathamo_asset_url( "/dist/admin.js" ),
 			[],
-			$this->configs['plugin_version'],
+			$this->version,
 			true
 		);
 	}
@@ -49,16 +50,16 @@ class AssetsManager
 	{
 		wp_enqueue_style(
 			kathamo_prefix( 'public-css' ),
-			kathamo_asset_url( "/public/css/public{$this->extension_prefix}.css" ),
+			kathamo_asset_url( "/dist/public.css" ),
 			[],
-			$this->configs['plugin_version'],
+			$this->version
 		);
 
 		wp_enqueue_script(
 			kathamo_prefix( 'public-js' ),
-			kathamo_asset_url( "/public/js/public{$this->extension_prefix}.js" ),
+			kathamo_asset_url( "/dist/public.js" ),
 			[],
-			$this->configs['plugin_version'],
+			$this->version,
 			true
 		);
 	}
