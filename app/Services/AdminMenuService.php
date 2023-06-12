@@ -2,9 +2,10 @@
 
 namespace Kathamo\App\Services;
 
+use Kathamo\Framework\Lib\Service;
 use Kathamo\App\Core\Lib\SingleTon;
 
-class AdminMenuService
+class AdminMenuService extends Service
 {
 	use SingleTon;
 
