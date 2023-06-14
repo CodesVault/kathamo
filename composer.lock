@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "33dbef7878b33b2c6a4a423296af11dc",
+    "content-hash": "4b6cfec189d519adae7555a1507e193c",
     "packages": [
         {
             "name": "codesvault/howdy-qb",
@@ -69,6 +69,59 @@
             "time": "2023-05-27T08:54:39+00:00"
         },
         {
+            "name": "codesvault/kathamo-framework",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CodesVault/kathamo-framework.git",
+                "reference": "ffe90d19736b413631cdac303d83eb67354a18ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CodesVault/kathamo-framework/zipball/ffe90d19736b413631cdac303d83eb67354a18ad",
+                "reference": "ffe90d19736b413631cdac303d83eb67354a18ad",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "mustache/mustache": "^2.14",
+                "symfony/console": "5.4.13",
+                "symfony/filesystem": "5.4.13",
+                "symfony/finder": "5.4.11"
+            },
+            "bin": [
+                "bin/kathamo"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kathamo\\Framework\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CodesVault",
+                    "email": "codesvault@gmail.com"
+                },
+                {
+                    "name": "Keramot UL Islam (AbmSourav)",
+                    "email": "keramotul.islam@gmail.com"
+                }
+            ],
+            "description": "The core framework for Kathamo.",
+            "support": {
+                "issues": "https://github.com/CodesVault/kathamo-framework/issues",
+                "source": "https://github.com/CodesVault/kathamo-framework/tree/1.0.2"
+            },
+            "time": "2023-06-14T13:36:05+00:00"
+        },
+        {
             "name": "codesvault/validator",
             "version": "1.0.1",
             "source": {
@@ -124,50 +177,6 @@
         }
     ],
     "packages-dev": [
-        {
-            "name": "codesvault/kathamo-framework",
-            "version": "0.0.1",
-            "dist": {
-                "type": "path",
-                "url": "./kathamo-framework",
-                "reference": "b8a6a79e7da98ade2646f4b24c102db3e96912b8"
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "mustache/mustache": "^2.14",
-                "symfony/console": "5.4.13",
-                "symfony/filesystem": "5.4.13",
-                "symfony/finder": "5.4.11"
-            },
-            "bin": [
-                "bin/kathamo"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Kathamo\\Framework\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "CodesVault",
-                    "email": "codesvault@gmail.com"
-                },
-                {
-                    "name": "Keramot UL Islam (AbmSourav)",
-                    "email": "keramotul.islam@gmail.com"
-                }
-            ],
-            "description": "Core package for Kathamo.",
-            "transport-options": {
-                "relative": true
-            }
-        },
         {
             "name": "codesvault/wp-seeder",
             "version": "1.0.0",

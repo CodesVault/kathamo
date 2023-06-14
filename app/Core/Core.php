@@ -2,8 +2,8 @@
 
 namespace Kathamo\App\Core;
 
-use Kathamo\App\Controllers\AdminMenuController;
 use Kathamo\Framework\Lib\BootManager;
+use Kathamo\App\Controllers\AdminMenuController;
 use Kathamo\App\Core\Lib\SingleTon;
 use Kathamo\App\Services\ActivationService;
 use Kathamo\App\Services\DeactivationService;
