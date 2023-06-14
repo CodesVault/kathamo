@@ -4,10 +4,9 @@ Framework for WordPress plugin development.
 <br>
 <br>
 
-> **It is recommended to use [Kathamo Generator](https://github.com/CodesVault/kathamo-generator) to generate your custom skeleton of this Framework**
+## Documentation
+Documentation is available at [kathamo.dev](https://kathamo.dev)
 
-<br>
+<!-- ## Plugin Architecture -->
 
-## Plugin Architecture
-
-![Architecture](https://abmsourav.com/welcome/wp-content/uploads/2022/10/howdy-WP-plugin-architecture.png)
+<!-- ![Architecture](https://abmsourav.com/welcome/wp-content/uploads/2022/10/howdy-WP-plugin-architecture.png) -->
