@@ -8,7 +8,3 @@ And This is the repo where everything mix together like a chef's recipe and spre
 
 ## Documentation
 Documentation is available at [kathamo.dev](https://kathamo.dev)
-
-<!-- ## Plugin Architecture -->
-
-<!-- ![Architecture](https://abmsourav.com/welcome/wp-content/uploads/2022/10/howdy-WP-plugin-architecture.png) -->

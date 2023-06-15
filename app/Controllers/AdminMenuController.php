@@ -21,7 +21,7 @@ class AdminMenuController extends BaseController
 			__( 'Kathamo', 'kathamo' ),
 			__( 'Kathamo', 'kathamo' ),
 			'manage_options',
-			'kathamo-wp',
+			'kathamo-adminmenu-slug',
 			[ $this, 'renderAdminMenu' ],
 			'dashicons-admin-generic',
 			40

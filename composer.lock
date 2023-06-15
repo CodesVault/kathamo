@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b6cfec189d519adae7555a1507e193c",
+    "content-hash": "2527e2bf1785d4d6a03dcd70bb0b2495",
     "packages": [
         {
             "name": "codesvault/howdy-qb",
@@ -70,30 +70,21 @@
         },
         {
             "name": "codesvault/kathamo-framework",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CodesVault/kathamo-framework.git",
-                "reference": "ffe90d19736b413631cdac303d83eb67354a18ad"
+                "reference": "3fe49aafb5d7fe3a6f0244a5fed7e88b9c0079d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CodesVault/kathamo-framework/zipball/ffe90d19736b413631cdac303d83eb67354a18ad",
-                "reference": "ffe90d19736b413631cdac303d83eb67354a18ad",
+                "url": "https://api.github.com/repos/CodesVault/kathamo-framework/zipball/3fe49aafb5d7fe3a6f0244a5fed7e88b9c0079d7",
+                "reference": "3fe49aafb5d7fe3a6f0244a5fed7e88b9c0079d7",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
             },
-            "require-dev": {
-                "mustache/mustache": "^2.14",
-                "symfony/console": "5.4.13",
-                "symfony/filesystem": "5.4.13",
-                "symfony/finder": "5.4.11"
-            },
-            "bin": [
-                "bin/kathamo"
-            ],
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -117,9 +108,9 @@
             "description": "The core framework for Kathamo.",
             "support": {
                 "issues": "https://github.com/CodesVault/kathamo-framework/issues",
-                "source": "https://github.com/CodesVault/kathamo-framework/tree/1.0.2"
+                "source": "https://github.com/CodesVault/kathamo-framework/tree/1.1.0"
             },
-            "time": "2023-06-14T13:36:05+00:00"
+            "time": "2023-06-15T11:53:48+00:00"
         },
         {
             "name": "codesvault/validator",
