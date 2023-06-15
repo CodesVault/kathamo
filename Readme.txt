@@ -1,6 +1,6 @@
-=== Howdy ===
-Plugin Name: Howdy
-Version: 0.0.8
+=== Kathamo ===
+Plugin Name: Kathamo
+Version: 1.0.0
 Author: codesVault
 Author URI: https://github.com/CodesVault/
 Contributors: codesVault, sourav926
