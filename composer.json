@@ -1,6 +1,6 @@
 {
     "name": "codesvalut/kathamo",
-    "description": "WordPress plugin starter",
+    "description": "This is were everything mix together. Kathamo is a framework for WordPress development. It is a collection of packages that work together in harmony.",
     "type": "project",
 	"license": "GPL-2.0",
     "authors": [
@@ -33,6 +33,6 @@
     "require": {
         "codesvault/howdy-qb": "^1.3",
         "codesvault/validator": "^1.0",
-        "codesvault/kathamo-framework": "^1.0"
+        "codesvault/kathamo-framework": "^1.1"
     }
 }
