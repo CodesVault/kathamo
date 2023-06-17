@@ -1,4 +1,11 @@
 #!/usr/bin/env php
 <?php
 
-require "./vendor/bin/kathamo";
+use Codesvault\WPseeder\Cli\CliManager;
+
+if (! empty($argv[1]) && 'seeder' === $argv[1]) {
+	require_once './vendor/autoload.php';
+	$argv[1] = ! empty($argv[2]) ? $argv[2] : $argv[1];
+
+	new CliManager($argv);
+}
