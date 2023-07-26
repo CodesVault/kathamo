@@ -1,6 +1,6 @@
 {
     "name": "codesvalut/kathamo",
-    "description": "This is were everything mix together. Kathamo is a framework for WordPress development. It is a collection of packages that work together in harmony.",
+    "description": "This is where everything mix together. Kathamo is a framework for WordPress development. It is a collection of packages that work together in harmony.",
     "type": "project",
 	"license": "GPL-2.0",
     "authors": [
