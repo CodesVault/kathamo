@@ -3,19 +3,16 @@
 namespace Kathamo\Database\Migrations;
 
 use CodesVault\Howdyqb\DB;
-use Kathamo\App\Core\Lib\SingleTon;
 
-class CacheMigration
+new class
 {
-	use SingleTon;
-
 	public function __construct()
 	{
 		// DB::create('cache')
 		// 	->column('ID')->bigInt()->unsigned()->autoIncrement()->primary()->required()
 		// 	->column('key')->string(255)->required()
-		// 	->column('data')->string(255)->default('NULL')
+		// 	->column('data')->string(255)->required()
 		// 	->index(['ID'])
 		// 	->execute();
 	}
-}
+};

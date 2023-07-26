@@ -15,8 +15,7 @@
     ],
 	"autoload": {
         "psr-4": {
-            "Kathamo\\App\\": "app/",
-            "Kathamo\\Database\\": "database/"
+            "Kathamo\\App\\": "app/"
         }
     },
     "scripts": {
@@ -31,8 +30,8 @@
         "codesvault/wp-seeder": "^1.1"
     },
     "require": {
-        "codesvault/howdy-qb": "^1.3",
-        "codesvault/validator": "^1.0",
-        "codesvault/kathamo-framework": "^1.1"
+        "codesvault/howdy-qb": "^1.5",
+        "codesvault/validator": "^1.1",
+        "codesvault/kathamo-framework": "^1.2"
     }
 }
