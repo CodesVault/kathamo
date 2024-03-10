@@ -11,12 +11,11 @@ class AdminMenuService extends Service
 
 	public function getData()
 	{
-		$data = [
+		return [
 			'plugin_name' => 'Kathamo',
 			'developed'   => 'Author',
 			'author_name' => 'CodesVault',
 			'author_link' => 'https://github.com/CodesVault',
 		];
-		return $data;
 	}
 }
